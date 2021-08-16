@@ -74,7 +74,7 @@ The Quality Requirements are classified into two categories: Hardware and Softwa
 
 The following is the list of hardware quality requirements:
 
-| Hardware uality Requirements        | Description                                                  |
+| Hardware Quality Requirements        | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
 | High Quality Electrical Connections | 1. The sensor's hardware must **<u>NOT</u>** have any errors in electrical connections.<br />2. High quality soldering practices |
 | Free of Short-Circuits              | 1. The sensor shall have **<u>NO</u>** short-circuits<br />2. The personnel shall check for short-circuits at every stage of the assembly |
