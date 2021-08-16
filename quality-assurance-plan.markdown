@@ -17,7 +17,7 @@ This document details the Quality Assurance Plan (QAP) and Risk Assessment Proce
   * [Training](#training)
       * [Training Needs](#training-needs)
       * [Training Program Implementation](#training-program-implementation)
-  * [Quality Assurance](#quality-assurance)
+  * [Quality Assurance Process](#quality-assurance-process)
       * [Quality Requirements](#quality-requirements)
           * [Hardware](#hardware)
           * [Software](#software)
@@ -39,7 +39,7 @@ This document details the Quality Assurance Plan (QAP) and Risk Assessment Proce
 
 The main objectives of this document are:
 
-- Establish and execute Quality Assurance (QA) measures and procedures to meet standards 
+- Establish and execute Quality Assurance (QA) measures and procedures to meet good standards 
 - Risk Assessment Process (RAP) guidelines to provide identification, evalution and control
 
 ### Scope
@@ -62,15 +62,36 @@ The following table outlines the roles and responsibilities for FloodNet personn
 
 ### Training Program Implementation
 
-## Quality Assurance
+## Quality Assurance Process
+
+The Quality Assurance Process shall be followed staff responsible for performing and verifying work affecting product quality. 
 
 ### Quality Requirements
 
+The Quality Requirements are classified into two categories: Hardware and Software. QAP process shall be followed on the former first, followed by the later. Software malfunction could be a result of failures in the hardware. Hence, the *QA process shall be reinitiated from the beginning upon identification of bugs in either stages to follow the QAP pipeline.*
+
 #### Hardware
+
+The following is the list of hardware quality requirements:
+
+| Hardware uality Requirements        | Description                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| High Quality Electrical Connections | 1. The sensor's hardware must **<u>NOT</u>** have any errors in electrical connections.<br />2. High quality soldering practices |
+| Free of Short-Circuits              | 1. The sensor shall have **<u>NO</u>** short-circuits<br />2. The personnel shall check for short-circuits at every stage of the assembly |
+| Desired Hardware operation          | 1.  The sensor Hardware shall be functional and tested before moving onto the software stage |
+| Waterproofed Sensor                 | 1. All the electrical wire connections lying **<u>inside</u>** as well as **<u>outside</u>** of the sensor shall be waterproofed using heat shrink tubing<br />2. All the external cables and electrical connections outside the sensor shall be waterproofed further either by using liquid electrical tape or silicon<br />3. The housing shall be checked for any defects or potential damage that might cause failure in waterproofing |
 
 #### Software
 
+Stable Sensor Operation
+
+Sensor Accuracy within Tolerance
+
+Good Wireless Connectivity
+
 ### Quality Assurance Stages
+
+Stage 1: 
 
 ### Quality Assurance Evaluations
 
@@ -81,6 +102,8 @@ The following table outlines the roles and responsibilities for FloodNet personn
 ### Quality Assurance Records
 
 ## Risk Assesment Process
+
+Continual imporovement is the goal of Risk Assessment Procedure (RAP). All employees, personnel, researchers and community members are encouraged to suggest improvements of any processes used to accomplish RAP goals and objectives. 
 
 ### Risk Identification
 
