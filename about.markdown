@@ -14,6 +14,5 @@ permalink: /about/
 
 
 <div align="justify">
-</br>
 The objective of the <a href="https://www.floodnet.nyc/">FloodNet</a> project is to develop and deploy a platform to provide real-time, street-level flood information - including the presence, frequency, and severity of local surface flood events - to a range of stakeholders, including policy makers, government agencies, citizens, emergency response teams, community advocacy groups, and researchers. This platform includes a physical sensor network, its connectivity, as well as data storage, and sharing infrastructure.
 </div>
