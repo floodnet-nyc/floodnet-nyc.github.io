@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Quality Assurance Plan
-permalink: /quality-assurance-plan/
+title: Quality Assurance Process
+permalink: /quality-assurance-process/
 ---
 
-# Quality Assurance Plan (QAP) and Risk Assessment Process (RAP)  - FloodNet
+# Quality Assurance Process (QAP) - FloodNet
 
-This document details the Quality Assurance Plan (QAP) and Risk Assessment Process (RAP) at FloodNet. This document details the responsibilities of the Quality Assurance personnel and chain of command for executing the QAP. 
+This document details the Quality Assurance Process (QAP) at FloodNet. This document details the responsibilities of the Quality Assurance personnel and chain of command for executing the QAP. 
 
 **Table of Contents:**
 
@@ -26,11 +26,6 @@ This document details the Quality Assurance Plan (QAP) and Risk Assessment Proce
           * [Hardware](#hardware)
           * [Software](#software)
     * [Quality Assurance Records](#quality-assurance-records)
-* [Risk Assesment Process](#risk-assessment-process)
-  * [Risk Identification](#risk-identification)
-  * [Risk Parameters](#risk-parameters)
-  * [Risk Control](#risk-control)
-  * [Risk Assessment Process Records](#risk-assessment-process-records)
 * [References](#references)
 
 ## General
@@ -44,7 +39,7 @@ The main objectives of this document are:
 
 ### Scope
 
-This Quality Assurance Plan (QAP) applies to all personnel performing sensor development, assembly and validation at FloodNet.
+This Quality Assurance Process (QAP) applies to all personnel performing sensor development, assembly and validation at FloodNet.
 
 ### Roles and Responsibilities
 
@@ -64,7 +59,7 @@ The following table outlines the roles and responsibilities for FloodNet personn
 
 ## Quality Assurance Process
 
-The Quality Assurance Process shall be followed staff responsible for performing and verifying work affecting product quality. 
+The Quality Assurance Process shall be followed staff responsible for performing and verifying work affecting sensor quality. 
 
 ### Quality Requirements
 
@@ -100,18 +95,6 @@ Stage 1:
 #### Software
 
 ### Quality Assurance Records
-
-## Risk Assesment Process
-
-Continual imporovement is the goal of Risk Assessment Procedure (RAP). All employees, personnel, researchers and community members are encouraged to suggest improvements of any processes used to accomplish RAP goals and objectives. 
-
-### Risk Identification
-
-### Risk Parameters
-
-### Risk Control
-
-### Risk Assessment Process Records
 
 ## References
 
