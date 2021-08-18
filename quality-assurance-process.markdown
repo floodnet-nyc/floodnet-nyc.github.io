@@ -18,13 +18,10 @@ This document details the Quality Assurance Process (QAP) at FloodNet. This docu
       * [Training Needs](#training-needs)
       * [Training Program Implementation](#training-program-implementation)
   * [Quality Assurance Process](#quality-assurance-process)
-      * [Quality Requirements](#quality-requirements)
-          * [Hardware](#hardware)
-          * [Software](#software)
-      * [Quality Assurance Stages](#quality-assurance-stages)
-      * [Quality Assurance Evaluations](#quality-assurance-evaluations)
-          * [Hardware](#hardware)
-          * [Software](#software)
+    * [Quality Requirements](#quality-requirements)
+        * [Hardware](#hardware)
+        * [Software](#software)
+    * [Quality Assurance Stages with Evaluation](#quality-assurance-stages-with-evaluation)
     * [Quality Assurance Records](#quality-assurance-records)
 * [References](#references)
 
@@ -34,8 +31,8 @@ This document details the Quality Assurance Process (QAP) at FloodNet. This docu
 
 The main objectives of this document are:
 
-- Establish and execute Quality Assurance (QA) measures and procedures to meet good standards 
-- Risk Assessment Process (RAP) guidelines to provide identification, evalution and control
+- Establish and execute Quality Assurance (QA) measures and procedures to meet high quality sensor standards 
+- Provide Quality Control (QC) guidelines for fault identification and rectification, and quality evaluations.
 
 ### Scope
 
@@ -84,17 +81,173 @@ Sensor Accuracy within Tolerance
 
 Good Wireless Connectivity
 
-### Quality Assurance Stages
+### Quality Assurance Stages with Evaluation
 
-Stage 1: 
+#### Stage 1: PCB Assembly
 
-### Quality Assurance Evaluations
+PCB fault check
 
-#### Hardware
+solder battery in using jst
 
-#### Software
+solder switch
 
-### Quality Assurance Records
+turn off the switch
+
+solder screw terminals for US and Solar
+
+
+
+solder battery out screw terminal
+
+shorts check
+
+#### Stage 2: MCU Assembly
+
+insert JST 2 pin connecter on the back side of MCU
+
+tan the other ends
+
+cut mcu male headers 
+
+Mount mcu male headers into female headers
+
+insert mcu leaving grounds
+
+connect mcu to Bout
+
+place upside down solder headers onto pcb first
+
+double check if mcu is sitting on the right pins and solder headers onto mcu
+
+solder mcu header pins
+
+MCU pins short check
+
+Screw terminals and MCU connectivity check
+
+end of soldering
+
+#### Stage 3: Battery Assembly
+
+Remove MCU 
+
+insert battery into battery in
+
+turn on the switch
+
+voltage check at bout should be VBat across VB and GND when s/w is on
+
+turn off the switch
+
+#### Evaluation 1: MCU main voltage check
+
+turn on the s/w 
+
+Check electrical connections and monitor voltages
+
+turn off the s/w 
+
+#### Stage 3: Housing Preperation
+
+remove the mounting headers for extra space
+
+drill hole for US
+drill hole for antenna dont use step drill - 
+drill hole for solar panel
+
+
+
+#### Evaluation 2: Housing quality 
+
+check for housing damages
+
+quality of holes 
+
+holes positioning
+
+#### Stage 5: US Assembly
+
+solder wires into US sensor 
+
+check for shorts
+
+stack 2 washers
+
+file the US
+
+Stick e-Tape on the top of MCU
+
+insert US into the housing lid secure using washer and lock nut
+
+#### Stage 7: PCB Mounting
+
+stick PCB using tape
+
+#### Stage 4: Solar Panel Assembly
+
+cut a wire
+
+prepare ends
+
+inert wire through cable gland 
+
+prepare ends and connect to PCB
+
+other end through 3d mount
+
+prepare ends and solder onto the Solar board
+
+screw into the screw terminal through the cable gland
+
+check connectivity solar panel to screw terminals to MCU
+
+#### Evaluation 3: Solar Panel Operation
+
+Flash light 
+
+check voltages 
+
+verify Positives and Negatives 
+
+Check for shorts
+
+
+
+#### Stage 6: Antenna Assembly
+
+insert other end of antenna into the housing secure with screws
+
+screw in antenna from the outside 
+
+insert antenna into mcu
+
+#### Evaluation 4: Sensor Operation
+
+flash test firmware check battery voltage and ultrasonic measurement on TTN console
+
+#### Sensor Quality Control Test - 1: Sensor power management test
+
+#### Final steps
+
+close lid 
+
+secure lid with screws 
+
+check - no moving parts 
+
+sensor physical quality check - holes, mounts, securing enclosure, waterproofing
+
+#### Sensor Quality Control Test - 2: Sensor data validation test
+
+#### Sensor Quality Control Test - 3: Solar Power harvesting test
+
+### QA/QC Records
+
+
+
+## Troubleshooting. 
+
+
 
 ## References
 
