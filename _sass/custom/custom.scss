@@ -5,10 +5,16 @@
 
 .site-header {
   border-bottom-color: #8c8c8c;
+  min-height: 85px;
+  height: 85px;
 }
 
 .main {
   max-width:950px;
+}
+
+.site-button{
+  font-size: large;
 }
 
 .main-content {
@@ -48,6 +54,7 @@ table{
 .main-header {
   background-color: #171717;
   border-bottom-color: #8c8c8c;
+  height: 85px;
 }
 
 .search-input {

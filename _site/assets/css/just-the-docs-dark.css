@@ -1542,7 +1542,11 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 .side-bar { background-color: #171717; border-right-color: #8c8c8c; }
 
-.site-header { border-bottom-color: #8c8c8c; }
+.site-header { border-bottom-color: #8c8c8c; min-height: 85px; height: 85px; }
+
+.main { max-width: 950px; }
+
+.site-button { font-size: large; }
 
 body { background-color: #171717; color: #ebebeb; }
 
@@ -1558,7 +1562,7 @@ table { border: 1px; padding: 10px; border-color: #dedede; }
 
 .search-results { background-color: #242424; }
 
-.main-header { background-color: #171717; border-bottom-color: #8c8c8c; }
+.main-header { background-color: #171717; border-bottom-color: #8c8c8c; height: 85px; }
 
 .search-input { background-color: #171717; }
 
