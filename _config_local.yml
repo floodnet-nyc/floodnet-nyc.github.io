@@ -23,17 +23,18 @@ title: FloodNet Documentation
 description: >- # this means to ignore newlines until "baseurl:"
   This website contains the documentation for FloodNet
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://floodsense.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
 logo: "/assets/images/logo.png"
 
 # Build settings
-remote_theme: pmarsceill/just-the-docs
+theme: "just-the-docs"
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
   
   # Enable or disable the site search
 # Supports true (default) or false
