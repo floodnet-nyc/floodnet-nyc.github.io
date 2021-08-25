@@ -2,6 +2,7 @@
 layout: page
 title: About FloodNet
 permalink: /about/
+nav_order: 2
 ---
 
 
@@ -26,4 +27,3 @@ Of the myriad impacts that are predicted to accompany climate change, flooding i
 	<br>
   <br>
 </div>
-

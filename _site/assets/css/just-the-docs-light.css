@@ -1550,6 +1550,8 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 body { background-color: #171717; color: #ebebeb; }
 
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link { color: #539dfc; }
+
 input { color: #c2c2c2; }
 
 .main-content-wrap { color: #c2c2c2; }

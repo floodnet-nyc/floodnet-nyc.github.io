@@ -1,0 +1,292 @@
+I"�'<h1 id="quality-control">Quality Control</h1>
+
+<p>The documnet set forths the quality control procedures are to verify the quality of the sensor build with consistency.</p>
+
+<p><strong>Table of Contents:</strong></p>
+
+<ul>
+  <li><a href="#general">General</a>
+    <ul>
+      <li><a href="#purpose">Purpose</a></li>
+      <li><a href="#scope">Scope</a></li>
+      <li><a href="#roles-and-responsibilities">Roles and Responsibilities</a></li>
+    </ul>
+  </li>
+  <li><a href="#training">Training</a>
+    <ul>
+      <li><a href="#training-needs">Training Needs</a></li>
+      <li><a href="#training-program-implementation">Training Program Implementation</a></li>
+    </ul>
+  </li>
+  <li><a href="#quality-requirements">Quality Requirements</a></li>
+  <li><a href="#quality-control">Quality Control</a></li>
+  <li><a href="#quality-control-records">Quality Control Records</a></li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+<h2 id="general">General</h2>
+
+<h3 id="purpose">Purpose</h3>
+
+<p>Provide Quality Control (QC) guidelines for fault identification and rectification, and quality evaluations</p>
+
+<h3 id="scope">Scope</h3>
+
+<p>This Quality Control Procedure applies to all personnel performing sensor development, assembly and validation at FloodNet.</p>
+
+<h2>Quality Requirements</h2>
+
+<p>The following are the quality requirements of the Flood Sensor:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Quality Requirements</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Sensor Data Validation</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Good Sensor Accuracy</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Desired Sensor operation</td>
+      <td>1.  The sensor Hardware shall be functional and tested before moving onto the software stage</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Weatherproofed Sensor</td>
+      <td>1. The sensor and it’s housing shall be checked for any defects or potential damage that might cause failure in waterproofing</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Good Wireless Connectivity</td>
+      <td>1. Sensor tested on the Testing Application on the back-end<br />2. Good RSSI values for LoRa</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="quality-control-1">Quality Control</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: left"><strong>Quality Control</strong></th>
+      <th style="text-align: left"><strong>Comply</strong></th>
+      <th style="text-align: left"><strong>Comment/Action Taken</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Electrical Connections</strong></td>
+      <td style="text-align: left">A. Maxbotix connections</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">B. Solar Charger Board connections</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">C. Battery plugged into the right terminal on the solar charger board</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">D. Solarpanel connected to the Solar Board Charger</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">E. <strong>io1</strong> connected to <strong>pin 6</strong></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">F. Antenna wire soldered onto the <strong>ANT</strong> pin</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">G. No short-circuits - checked using a Multimeter</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">H. SD Card inserted correctly</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">I. Coin-cell battery inserted into the Feather Wing</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><strong>2. Connections Quality Control</strong></td>
+      <td style="text-align: left">A. No exposed copper on the wires</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">B. No loose connections</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">C. No wrong connections</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">D. All wire joints are heat-shrinked</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">E. No melted wires</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">F. No Cold Joints</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">G. No excess solder</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">H. No Insufficient wetting pads</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">I. No distribuited solder joints/ Solder bridges</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">J. Rigid and Good Quality Solar Panel connection</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">J. Waterproofed Solar Panel connection</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><strong>3. Sensor Rigidity</strong></td>
+      <td style="text-align: left">A. MCU firmly mounted onto the connector board</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">B. Connector board mounted onto the perforated plastic panel of the housing using Headers and screws</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">C. Ultrasonic Sensor firmly secured using the lock nut</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">D. Solar Panel cable firmly secured using the PG Cable gland</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">E. Solar board charger mounted/firmly secured using industrial tape</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">F. Enough room for battery</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">G. Solar Panel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><strong>4. Sensor Operation</strong></td>
+      <td style="text-align: left">A. Sensor pushing uplinks to <strong>correct</strong> The Things Network application</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">B. First uplink is the CFG packet</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">C. Sensor on correct duty cycle</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">D. Correct distance readings</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td style="text-align: left">E. Correct battery level when <strong><em>not</em></strong> connected via USB</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><strong>5. Sensor Accuracy</strong></td>
+      <td style="text-align: left">A. Sensor readings accuracy &lt;= 10 mm at 1 meter - Indoor conditions</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://www.thespruce.com/wire-connection-problems-and-solutions-1152877">The Spruce, Wire connection problems and solutions</a></li>
+  <li><a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all">Adafruit’s Tutorial on Good Soldering Practices</a></li>
+  <li><a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all">How to Solder: Through-hole Soldering</a></li>
+</ol>
+:ET
