@@ -7,11 +7,12 @@ permalink: docs/quality-management/
 ---
 
 # Quality Management
-
 {: .no_toc }
 
 This folder contains the Quality Management at FloodNet including - Quality Assurance Procedure (QAP), Quality Control (QC), and Troubleshooting to implement, execute, and validate the sensor quality.
 {: .fs-6 .fw-300 }
+
+<br />
 
 <h2>Roles and Responsibilities</h2>
 
