@@ -38,7 +38,7 @@ The main objective of this document is to establish and execute Quality Assuranc
 
 The Quality Assurance Process shall be followed staff responsible for performing and verifying work affecting sensor quality. 
 
-### **Stage 1 - PCB Assembly**
+### Stage 1 - PCB Assembly
 
 1. Gather the PCB and a multimeter to check the PCB for any manufacturing defects. To perform the PCB fault check, place one probe on the beginning of the trace and the other on the ending and check for any short circuits like shown in figure 1. Repeat this process for every trace.
 
@@ -55,7 +55,7 @@ The Quality Assurance Process shall be followed staff responsible for performing
 
 7. Using a multimeter check for shorts and connectivity like shown in figure 7. Further quality of the soldering shall be checked at this step and [identify and resolve any soldering errors](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all#common-problems).
 
-### **Stage 2 - MCU Assembly**
+### Stage 2 - MCU Assembly
 
 1. Prepare a 2 Pin JST connector by tanning the other ends. Then, insert the JST 2 pin connecter on the back side of MCU like shown below in figure 8.
 2. Now cut the MCU male headers to match the number of through holes on the PCB and the female header pins like shown in the below figure 9.
@@ -65,17 +65,17 @@ The Quality Assurance Process shall be followed staff responsible for performing
 6. Now, connect the 2 ends of the JST connector from the MCU with the BAT OUT into their corresponding terminals VB and G respectively like shown in the figure 13 below.
 7. Using a multimeter check for the connectivity between the MCU pins and the screw terminals.
 
-### **Stage 3 - Battery Assembly**
+### Stage 3 - Battery Assembly
 
 1. Remove the MCU from the female header pins and insert a ***fully charged*** 400mAh battery into the BAT IN and secure the battery by using a tape like shown in the figure 14 below.
 2. Mount the MCU back onto the headers and make sure the battery is not under pressure or being crushed by the MCU. When the battery and MCU are looking like figure 15, there must be enough space between the MCU and battery.
 
-### **Evaluation 1 - Main voltage check**
+### Evaluation 1 - Main voltage check
 
 1. Turn on the switch and check the voltage at BAT OUT. The multimeter reading should be VBat - the battery's voltage level, across VB and GND when the s/w is on like shown below in figure 15.
 2. Turn off the switch before proceeding to next steps - figure 16.
 
-### **Stage 4 - Housing Preperation**
+### Stage 4 - Housing Preperation
 
 Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 
@@ -83,7 +83,7 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 2. Secure the housing with the side that does not have mounting supports facing upwards. Place a marker using the antenna-jig. Remove the antenna-jig and drill a hole of diameter {fill-me-in} to accommodate the antenna like shown in figure 18.
 3. Similarly, on the opposite side where there is no mounting support, drill a hole of diameter {fill-me-in} using the pg5-cable-jig to accommodate the solar panel cable like shown in figure 19.
 
-### **Stage 5 - Ultrasonic Sensor Assembly**
+### Stage 5 - Ultrasonic Sensor Assembly
 
 1. Tan both ends of 4 different colored wires and solder one end of the wires onto the Ultrasonic sensor's pins - GND, V+, 5 and 4 respectively like shown in figure 20. 
 2. Now twist the cables like shown below in figure 21.
@@ -91,12 +91,12 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 4. Stack 2 washers that come with the lock nut like shown below in figure 22.
 5. Insert US into the housing lid secure it using a lock nut on the inside of the housing lid like shown in figure 23.
 
-### **Stage 6 - PCB Mounting**
+### Stage 6 - PCB Mounting
 
 1. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the one shown in the figure 24.
 2. Insert the MCU back into the header pins
 
-### **Stage 7 - Solar Panel Assembly**
+### Stage 7 - Solar Panel Assembly
 
 1. Use a {fill-me-in} wire and cut it to a length of {fill-me-in} like shown in the figure 25.
 
@@ -111,25 +111,25 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 6. Now, prepare the ends by stripping the wires and tinning them and solder the ends onto the Solar board like shown in figure 30.
 7. Screw the open ends of the solar cable into the screw terminal SOLAR through the cable gland and check connectivity between the solar panel and screw terminals like shown in figure 31.
 
-### **Evaluation 2 - Solar Panel Operation**
+### Evaluation 2 - Solar Panel Operation
 
 1. Check for connectivity between both the ends of the solar cable. Also check for shorts between the VS and GND {figure 32}
 2. Flash light onto the solar panel and check voltages on the screw terminals using a multimeter like shown below. When a phone falshlight is  flashed upon the panel, it should read atleast 3 Volts. {figure 33}
 
 2. Now with the light is being flashed onto the panel, verify the VS is the positive terminal. If not, the solar panel has been soldered in reverse and shall be re-soldered so that a positive voltage is seen on the VS. {figure 34}
 
-### **Stage 8 - Antenna Assembly**
+### Stage 8 - Antenna Assembly
 
 1. Stack a star washer and lock washer and insert the end of the antenna with threading into the housing from the inside like shown in the figure 35
 2. Secure it using a screw from the outside like shown in figure 36
 3. Insert the ulf connector of the antenna onto the MCU like shown in figure 37.
 4. Screw in the LoRa Antenna from the outside like shown in the figure 38. The antenna should feel tight after screwing onto the threading. If not, try washers of different size.
 
-### **Evaluation 3 - Sensor Operation**
+### Evaluation 3 - Sensor Operation
 
 1. Flash the test firmware and check the battery voltage and ultrasonic measurements on TTN console. The battery voltage shall be between 3.7 Volts and 4.2 Volts. Since we would be using a fully charged battery, it should read voltage greater than 4 Volts. The distance reading on the TTN console shall be greater than or equal to 300 and less than or equal to the maximum range of the sensor model. The 5-meter model range is 300mm to 5000mm and the 10-meter model range is 300mm to 10000mm. {figure 39}
 
-### **Final steps**
+### Final steps
 
 1. Close the lid and make sure the ultrasonic sensor wires goes to the {} to avoid the wires being in the way. {figure 40}
 
