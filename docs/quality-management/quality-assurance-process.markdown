@@ -14,18 +14,6 @@ This document details the Quality Assurance Process (QAP) at FloodNet. This docu
   * [General](#general)
       * [Purpose](#purpose)
   * [Quality Assurance Process](#quality-assurance-process)
-        * [Stage 1 - PCB Assembly](#stage-1-pcb-assembly)
-        * [Stage 2 - MCU Assembly](#stage-2-mcu-assembly)
-        * [Stage 3 - Battery Assembly](#stage-3-battery-assembly)
-        * [Evaluation 1 -  Main Voltage Check](#evaluation-1-main-voltage-check)
-        * [Stage 4 - Housing Preperation](#stage-4-housing-preparation)
-        * [Stage 5 - Ultrasonic Sensor Assembly](#stage-5-ultrasonic-sensor-assembly)
-        * [Stage 6 - PCB Mounting](#stage-6-pcb-mounting)
-        * [Stage 7 - Solar Panel Assembly](#stage-7-solar-panel-assembly)
-        * [Evaluation 2 - Solar Panel Operation](evaluation-2-solar-panel-operation)
-        * [Stage 8 - Antenna Assembly](#stage-8-antenna-assembly)
-        * [Evaluation 3 - Sensor Operation](evaluation-3-sensor-operation)
-        * [Final Steps](#final-steps)
 * [References](#references)
 
 <h2>General</h2>
