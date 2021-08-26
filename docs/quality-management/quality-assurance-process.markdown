@@ -13,12 +13,19 @@ This document details the Quality Assurance Process (QAP) at FloodNet. This docu
 
   * [General](#general)
       * [Purpose](#purpose)
-      * [Scope](#scope)
-      * [Roles and Responsibilities](#roles-and-responsibilities)
-  * [Training](#training)
-      * [Training Needs](#training-needs)
-      * [Training Program Implementation](#training-program-implementation)
   * [Quality Assurance Process](#quality-assurance-process)
+        * [Stage 1: PCB Assembly](#stage-1-pcb-assembly)
+        * [Stage 2: MCU Assembly](#stage-2-mcu-assembly)
+        * [Stage 3: Battery Assembly](#stage-3-battery-assembly)
+        * [Evaluation 1: Main Voltage Check](#evaluation-1-main-voltage-check)
+        * [Stage 4: Housing Preperation](#stage-4-housing-preparation)
+        * [Stage 5: Ultrasonic Sensor Assembly](#stage-5-ultrasonic-sensor-assembly)
+        * [Stage 6: PCB Mounting](#stage-6-pcb-mounting)
+        * [Stage 7: Solar Panel Assembly](#stage-7-solar-panel-assembly)
+        * [Evaluation 2: Solar Panel Operation](evaluation-2-solar-panel-operation)
+        * [Stage 8: Antenna Assembly](#stage-8-antenna-assembly)
+        * [Evaluation 3: Sensor Operation](evaluation-3-sensor-operation)
+        * [Final Steps](#final-steps)
 * [References](#references)
 
 <h2>General</h2>
@@ -26,10 +33,6 @@ This document details the Quality Assurance Process (QAP) at FloodNet. This docu
 <h3>Purpose</h3>
 
 The main objective of this document is to establish and execute Quality Assurance (QA) measures and procedures to produce high quality sensor standards with consistency.
-
-<h3>Scope</h3>
-
-This Quality Assurance Process (QAP) applies to all personnel performing sensor development, assembly and validation at FloodNet.
 
 <h2>Quality Assurance Process</h2>
 
@@ -80,7 +83,7 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 2. Secure the housing with the side that does not have mounting supports facing upwards. Place a marker using the antenna-jig. Remove the antenna-jig and drill a hole of diameter {fill-me-in} to accommodate the antenna like shown in figure 18.
 3. Similarly, on the opposite side where there is no mounting support, drill a hole of diameter {fill-me-in} using the pg5-cable-jig to accommodate the solar panel cable like shown in figure 19.
 
-### **Stage 5: US Assembly**
+### **Stage 5: Ultrasonic Sensor Assembly**
 
 1. Tan both ends of 4 different colored wires and solder one end of the wires onto the Ultrasonic sensor's pins - GND, V+, 5 and 4 respectively like shown in figure 20. 
 2. Now twist the cables like shown below in figure 21.
@@ -88,12 +91,12 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 4. Stack 2 washers that come with the lock nut like shown below in figure 22.
 5. Insert US into the housing lid secure it using a lock nut on the inside of the housing lid like shown in figure 23.
 
-### **Stage 7: PCB Mounting**
+### **Stage 6: PCB Mounting**
 
 1. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the one shown in the figure 24.
 2. Insert the MCU back into the header pins
 
-### **Stage 4: Solar Panel Assembly**
+### **Stage 7: Solar Panel Assembly**
 
 1. Use a {fill-me-in} wire and cut it to a length of {fill-me-in} like shown in the figure 25.
 
@@ -103,45 +106,39 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 
 4. Screw in the ends into the Solar screw terminals into the respective pins like shown in figure 28.
 
-other end through 3d mount
+5. Stick one side of the gasket onto the 3d mount and run the other end of the solar cable through the 3d mount like shown in figure 29. Leave enough space for soldering the solar panel.
 
-prepare ends and solder onto the Solar board
-
-screw into the screw terminal through the cable gland
-
-check connectivity solar panel to screw terminals to MCU
+6. Now, prepare the ends by stripping the wires and tinning them and solder the ends onto the Solar board like shown in figure 30.
+7. Screw the open ends of the solar cable into the screw terminal SOLAR through the cable gland and check connectivity between the solar panel and screw terminals like shown in figure 31.
 
 ### **Evaluation 2: Solar Panel Operation**
 
-Flash light 
+1. Check for connectivity between both the ends of the solar cable. Also check for shorts between the VS and GND {figure 32}
+2. Flash light onto the solar panel and check voltages on the screw terminals using a multimeter like shown below. When a phone falshlight is  flashed upon the panel, it should read atleast 3 Volts. {figure 33}
 
-check voltages 
+2. Now with the light is being flashed onto the panel, verify the VS is the positive terminal. If not, the solar panel has been soldered in reverse and shall be re-soldered so that a positive voltage is seen on the VS. {figure 34}
 
-verify Positives and Negatives 
+### **Stage 8: Antenna Assembly**
 
-Check for shorts
-
-### **Stage 6: Antenna Assembly**
-
-insert other end of antenna into the housing secure with screws
-
-screw in antenna from the outside 
-
-insert antenna into mcu
+1. Stack a star washer and lock washer and insert the end of the antenna with threading into the housing from the inside like shown in the figure 35
+2. Secure it using a screw from the outside like shown in figure 36
+3. Insert the ulf connector of the antenna onto the MCU like shown in figure 37.
+4. Screw in the LoRa Antenna from the outside like shown in the figure 38. The antenna should feel tight after screwing onto the threading. If not, try washers of different size.
 
 ### **Evaluation 3: Sensor Operation**
 
-flash test firmware check battery voltage and ultrasonic measurement on TTN console
+1. Flash the test firmware and check the battery voltage and ultrasonic measurements on TTN console. The battery voltage shall be between 3.7 Volts and 4.2 Volts. Since we would be using a fully charged battery, it should read voltage greater than 4 Volts. The distance reading on the TTN console shall be greater than or equal to 300 and less than or equal to the maximum range of the sensor model. The 5-meter model range is 300mm to 5000mm and the 10-meter model range is 300mm to 10000mm. {figure 39}
 
 ### **Final steps**
 
-close lid 
+1. Close the lid and make sure the ultrasonic sensor wires goes to the {} to avoid the wires being in the way. {figure 40}
 
-secure lid with screws 
+2. Now secure the lid with screws {figure 41}
 
-check - no moving parts 
+3. The sensor shall feel robust and when invereted there shall be no moving parts.
 
-sensor physical quality check - holes, mounts, securing enclosure, waterproofing
+4. Inspect the sensor mechanical quality of the following: holes, mounts, securing enclosure, waterproofing. {figure 42}
+5. Remove the tape on the gasket and install the solar panel onto the 3D mount {figure 43}
 
 <h2>References</h2>
 

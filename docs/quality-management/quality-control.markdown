@@ -13,11 +13,6 @@ The documnet set forths the quality control procedures are to verify the quality
 
   * [General](#general)
     * [Purpose](#purpose)
-    * [Scope](#scope)
-    * [Roles and Responsibilities](#roles-and-responsibilities)
-  * [Training](#training)
-    * [Training Needs](#training-needs)
-    * [Training Program Implementation](#training-program-implementation)
 * [Quality Requirements](#quality-requirements)
 * [Quality Control](#quality-control)
 * [Quality Control Records](#quality-control-records)
@@ -27,11 +22,10 @@ The documnet set forths the quality control procedures are to verify the quality
 
 ### Purpose
 
-Provide Quality Control (QC) guidelines for fault identification and rectification, and quality evaluations
+Provide Quality Control (QC) guidelines for 
 
-### Scope
-
-This Quality Control Procedure applies to all personnel performing sensor development, assembly and validation at FloodNet.
+- Sensor Calibration testing 
+- Sensor accuracy testing and validation
 
 <h2>Quality Requirements</h2>
 
