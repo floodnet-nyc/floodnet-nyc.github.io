@@ -27,7 +27,7 @@ Provide Quality Control (QC) guidelines for
 - Sensor Calibration testing 
 - Sensor accuracy testing and validation
 
-<h2>Quality Requirements</h2>
+## Quality Requirements
 
 The following are the quality requirements of the Flood Sensor:
 
