@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Quality Assurance Process
+title: Quality Assurance Procedure
 parent: Quality Management
-permalink: /quality-management/quality-assurance-process/
+permalink: /quality-management/quality-assurance-procedure/
 ---
 
-# Quality Assurance Process (QAP)
+# Quality Assurance Procedure (QAP)
 
-This document details the Quality Assurance Process (QAP) at FloodNet. This document details every stage of the build/assembly procedure to ensure a good sensor build quality.
+This document details the Quality Assurance Procedure (QAP) at FloodNet. This document details every stage of the build/assembly procedure to ensure a good sensor build quality.
 
 **Table of contents:**
 
 * [General](#general)
   + [Purpose](#purpose)
-* [Quality Assurance Process](#quality-assurance-process)
+* [Quality Assurance Procedure](#quality-assurance-process)
   + [Stage 1 - PCB Assembly](#stage-1---pcb-assembly)
   + [Stage 2 - MCU Assembly](#stage-2---mcu-assembly)
   + [Stage 3 - Battery Assembly](#stage-3---battery-assembly)
@@ -32,11 +32,11 @@ This document details the Quality Assurance Process (QAP) at FloodNet. This docu
 
 ### Purpose
 
-The main objective of this document is to establish and execute Quality Assurance Process(QAP) to produce high quality sensor standards with consistency.
+The main objective of this document is to establish and execute Quality Assurance Procedure (QAP) to produce high quality sensor standards with consistency.
 
-## Quality Assurance Process
+## Quality Assurance Procedure
 
-The Quality Assurance Process shall be followed by all the personnel responsible for performing and verifying work affecting sensor quality. 
+The QAP shall be followed by all the personnel responsible for performing and verifying work affecting sensor quality. 
 
 ### Stage 1 - PCB Assembly
 

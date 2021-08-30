@@ -1,0 +1,140 @@
+I"!<h1 id="real-time-data-pipeline">Real-time Data Pipeline</h1>
+
+<ul>
+  <li><a href="#10-general">1.0 General</a>
+    <ul>
+      <li><a href="#11-background">1.1 Background</a></li>
+      <li><a href="#12-purpose">1.2 Purpose</a></li>
+    </ul>
+  </li>
+  <li><a href="#20-considerations-limitations">2.0 Considerations/Limitations</a></li>
+  <li><a href="#21-ground-truth-validation-of-real-time-flood-depth-data">2.1 Ground truth Validation of Real-time Flood Depth Data</a>
+    <ul>
+      <li><a href="#22-sensor-deployment-considerations">2.2 Sensor Deployment Considerations</a>
+        <ul>
+          <li><a href="#221-error-in-pole-mount-angles">2.2.1 Error in Pole Mount Angles</a></li>
+          <li><a href="#222-location-and-surface">2.2.2 Location and Surface</a></li>
+          <li><a href="#223-obstacles">2.2.3 Obstacles</a></li>
+        </ul>
+      </li>
+      <li><a href="#23-hardware-limitations">2.3 Hardware Limitations</a>
+        <ul>
+          <li><a href="#231-accuracy-of-ultrasonic-sensor">2.3.1 Accuracy of Ultrasonic Sensor</a></li>
+          <li><a href="#232-noise-floor-of-ultrasonic-sensor">2.3.2 Noise Floor of Ultrasonic Sensor</a></li>
+          <li><a href="#233-seasonal-and-temperature-drift">2.3.3 Seasonal and Temperature Drift</a></li>
+          <li><a href="#234-influence-on-ultrasonic-raw-measurements-by-external-factors">2.3.4 Influence on Ultrasonic Raw measurements by external factors</a></li>
+        </ul>
+      </li>
+      <li><a href="#24-other-important-considerations">2.4 Other Important Considerations</a></li>
+    </ul>
+  </li>
+  <li><a href="#30-flood-depth-data-flow-pipeline">3.0 Flood Depth Data Flow Pipeline</a>
+    <ul>
+      <li><a href="#31-data-flow-pipeline-overview">3.1 Data Flow Pipeline Overview</a></li>
+      <li><a href="#32-data-processing-methodology">3.2 Data Processing Methodology</a>
+        <ul>
+          <li><a href="#message-syntax-check---ttn-console">Message Syntax Check - TTN Console</a></li>
+          <li><a href="#distance-to-depth-conversion">Distance to Depth Conversion</a></li>
+          <li><a href="#erroneous-depth-data-filter">Erroneous Depth Data Filter</a></li>
+          <li><a href="#data-storage---influxdb">Data Storage - InfluxDB</a></li>
+          <li><a href="#offset-calculator">Offset Calculator</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+<h2 id="10-general">1.0 General</h2>
+
+<h3 id="11-background">1.1 Background</h3>
+
+<p>This project uses advanced IoT flood sensors to measure Real-time Flood Depth Data (FDD) on a city-wide scale using <a href="https://www.maxbotix.com/ultrasonic_sensors/mb7389.htm">Industrial grade Ultrasonic</a> ranging technology. The Ultrasonic rangefinder readings are distance measurements and they are passed through a real-time data pipeline to calculate depth measurements.</p>
+
+<h3 id="12-purpose">1.2 Purpose</h3>
+
+<p>The purpose of this document is to explain the Real-time Flood Depth Data pipeline and methodology.</p>
+
+<h2 id="20-considerationslimitations">2.0 Considerations/Limitations</h2>
+
+<p>This section details the important considerations and limitations of the Flood Depth Data quality.</p>
+
+<h2 id="21-ground-truth-validation-of-real-time-flood-depth-data">2.1 Ground truth Validation of Real-time Flood Depth Data</h2>
+
+<p>To manually validate the Real-time Flood Depth Data, the FloodNet researchers have conducted a Manual Validation Experiment during the event of a flood on the July 23 at 8:30pm in {location}. Manual depth calculation is performed by manually capturing the depth readings from a standard measuring scale that has been installed on the same pole on which the sensor has been mounted.</p>
+
+<p><img src="/assets/images/floodnet-researchers-in-action.jpg" width="400" /></p>
+
+<p>The following figure shows the comparision of manual depth captured vs Flood-Depth Data processed from the Data-pipeline. The results verify the validation of the Flood Depth Data captured by this Real-time Flood Monitoring System.</p>
+
+<figure>
+  <img src="/assets/images/manual-validation-plot.png" alt="validation plot" />
+</figure>
+
+<h3 id="22-sensor-deployment-considerations">2.2 Sensor Deployment Considerations</h3>
+
+<h4 id="221-error-in-pole-mount-angles">2.2.1 Error in Pole Mount Angles</h4>
+
+<p>Error in Light pole angles, street sign post angles</p>
+
+<h4 id="222-location-and-surface">2.2.2 Location and Surface</h4>
+
+<h4 id="223-obstacles">2.2.3 Obstacles</h4>
+
+<p>Weeds, dogs, humans, animals</p>
+
+<h3 id="23-hardware-limitations">2.3 Hardware Limitations</h3>
+
+<h4 id="231-accuracy-of-ultrasonic-sensor">2.3.1 Accuracy of Ultrasonic Sensor</h4>
+
+<h4 id="232-noise-floor-of-ultrasonic-sensor">2.3.2 Noise Floor of Ultrasonic Sensor</h4>
+
+<h4 id="233-seasonal-and-temperature-drift">2.3.3 Seasonal and Temperature Drift</h4>
+
+<h4 id="234-influence-on-ultrasonic-raw-measurements-by-external-factors">2.3.4 Influence on Ultrasonic Raw measurements by external factors</h4>
+
+<h3 id="24-other-important-considerations">2.4 Other Important Considerations</h3>
+
+<p>In addition to the data quality mentioned in the manual, Quality Assurance Process (QAP) performed on sensor during assembly/production is critical to data quality. All personnel performing sensor build must follow the QAP procedure and shall comply Hardware QC checklist during the assembly/production process prior to the deployment.</p>
+
+<p>All sensors and measurements contains errors that are determined by hardware quality, calibration accuracy, modes of operation, and data processing and pipeline techniques. All these considereations are quantified and explained in the section 4.2 Flood Sensor QC Test description.</p>
+
+<h2 id="30-flood-depth-data-flow-pipeline">3.0 Flood Depth Data Flow Pipeline</h2>
+
+<h3 id="31-data-flow-pipeline-overview">3.1 Data Flow Pipeline Overview</h3>
+
+<p>The following figure shows the overview of the Data Flow Pipeline:</p>
+
+<p><img src="/assets/images/data-pipeline-overview.png" alt="datapipeline-overview" /></p>
+
+<p>The Flood Sensors transmit the raw data packets over LoRaWAN. These packets are forwarded to a The Things Network (TTN) application via LoRa Gateway. This data is further flows from the TTN into an open-source tools hosted on NYU servers. This combination of docker containers is running a load-balanced web server (NGINX), certificate authority (LetsEncrypt), data routing layer (NodeRed), a database (InfluxDB), and a dashboard platform (Grafana).</p>
+
+<p>When the raw data packets transmitted by the sensors from the field reach the Node-RED, Pre-Production (Laboratory), Post-Production (On-Site), and Real-Time (On-Site) testing stages are implemented.</p>
+
+<p>Raw as well as tested data is stored in the InfluxDB database. From there, Grafana handles all the visualization and alerting through its intuitive dashboarding platform.</p>
+
+<h3 id="32-data-processing-methodology">3.2 Data Processing Methodology</h3>
+
+<p><img src="/assets/images/full-data-pipeline.png" alt="full-data-pipeline" /></p>
+
+<h4 id="message-syntax-check---ttn-console">Message Syntax Check - TTN Console</h4>
+
+<h4 id="distance-to-depth-conversion">Distance to Depth Conversion</h4>
+
+<h4 id="erroneous-depth-data-filter">Erroneous Depth Data Filter</h4>
+
+<h4 id="data-storage---influxdb">Data Storage - InfluxDB</h4>
+
+<h4 id="offset-calculator">Offset Calculator</h4>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://doi.org/10.25923/vpsx-dc82">U.S. Integrated Ocean Observing System, 2021. Manual for Real-Time Quality Control of Water Level Data Version 2.1</a></li>
+  <li><a href="ftp://ftp.library.noaa.gov/noaa_documents.lib/NWS/NWS_TSP_88-21-R2.pdf">NWS Techniques Specification Package (TSP) 88-21-R2 (1994)</a></li>
+  <li><a href="https://www.maxbotix.com/documents/HRXL-MaxSonar-WR_Datasheet.pdf">Maxbotix HRXl-MaxSonar -WR Datasheet</a></li>
+  <li><a href="https://www1.nyc.gov/html/dot/downloads/pdf/nyc-dot-traffic-signal-standard-drawings.pdf">New York City Department of Transportation Traffic Signal Standard Drawings</a></li>
+  <li><a href="https://www.dot.ny.gov/main/business-center/engineering/specifications/busi-e-standards-usc/usc-repository/2017_9_stdsht_usc_book%204.pdf">New York State Standard Sheets</a></li>
+  <li><a href="https://lora-developers.semtech.com/uploads/documents/files/LoRaWAN_Class_A_Devices_In_Depth_Downloadable.pdf">LoRaWAN Class A Devices</a></li>
+</ol>
+:ET
