@@ -20,7 +20,6 @@ permalink: /real-time-data-pipeline/
     + [2.3.2 Noise Floor of Ultrasonic Sensor](#232-noise-floor-of-ultrasonic-sensor)
     + [2.3.3 Seasonal and Temperature Drift](#233-seasonal-and-temperature-drift)
     + [2.3.4 Influence on Ultrasonic Raw measurements by external factors](#234-influence-on-ultrasonic-raw-measurements-by-external-factors)
-  * [2.4 Other Important Considerations](#24-other-important-considerations)
 - [3.0 Flood Depth Data Flow Pipeline](#30-flood-depth-data-flow-pipeline)
   * [3.1 Data Flow Pipeline Overview](#31-data-flow-pipeline-overview)
   * [3.2 Data Processing Methodology](#32-data-processing-methodology)
@@ -51,7 +50,7 @@ To manually validate the Real-time Flood Depth Data, the FloodNet researchers ha
 
 <img src="/assets/images/floodnet-researchers-in-action.jpg" width="400"/>
 
-The following figure shows the comparision of manual depth captured vs Flood-Depth Data processed from the Data-pipeline. The results verify the validation of the Flood Depth Data captured by this Real-time Flood Monitoring System.
+The following figure shows the comparision of manual depth captured vs Flood-Depth Data processed from the Data-pipeline. The results verify the validation of the Flood Depth Data captured by the Real-time Flood Monitoring System.
 
 <figure>
   <img
@@ -83,12 +82,6 @@ Weeds, dogs, humans, animals
 
 #### 2.3.4 Influence on Ultrasonic Raw measurements by external factors
 
-### 2.4 Other Important Considerations
-
-In addition to the data quality mentioned in the manual, Quality Assurance Process (QAP) performed on sensor during assembly/production is critical to data quality. All personnel performing sensor build must follow the QAP procedure and shall comply Hardware QC checklist during the assembly/production process prior to the deployment.
-
-All sensors and measurements contains errors that are determined by hardware quality, calibration accuracy, modes of operation, and data processing and pipeline techniques. All these considereations are quantified and explained in the section 4.2 Flood Sensor QC Test description. 
-
 ## 3.0 Flood Depth Data Flow Pipeline
 
 ### 3.1 Data Flow Pipeline Overview
@@ -97,11 +90,11 @@ The following figure shows the overview of the Data Flow Pipeline:
 
 ![datapipeline-overview](/assets/images/data-pipeline-overview.png)
 
-The Flood Sensors transmit the raw data packets over LoRaWAN. These packets are forwarded to a The Things Network (TTN) application via LoRa Gateway. This data is further flows from the TTN into an open-source tools hosted on NYU servers. This combination of docker containers is running a load-balanced web server (NGINX), certificate authority (LetsEncrypt), data routing layer (NodeRed), a database (InfluxDB), and a dashboard platform (Grafana).
+The Flood Sensors transmit the raw data packets over LoRaWAN. These packets are forwarded to a The Things Network (TTN) application via LoRa Gateway. This data is further flows from the TTN into open-source tools hosted on NYU servers for further processing and storage. A combination of docker containers is running a load-balanced web server (NGINX), certificate authority (LetsEncrypt), data routing layer (NodeRed), a database (InfluxDB), and a dashboard platform (Grafana).
 
-When the raw data packets transmitted by the sensors from the field reach the Node-RED, Pre-Production (Laboratory), Post-Production (On-Site), and Real-Time (On-Site) testing stages are implemented.
+The data processing stage takes place on the Node-RED flow, where the raw distance measurements are converted into Flood Depth Data (FDD).
 
-Raw as well as tested data is stored in the InfluxDB database. From there, Grafana handles all the visualization and alerting through its intuitive dashboarding platform. 
+Raw as well as processed data is stored in the InfluxDB database. From there, Grafana handles all the visualization and alerting through its intuitive dashboarding platform. 
 
 ### 3.2 Data Processing Methodology
 
@@ -109,7 +102,11 @@ Raw as well as tested data is stored in the InfluxDB database. From there, Grafa
 
 #### Message Syntax Check - TTN Console
 
+Payload decoder has been implemented on the TTN console to check and verify the payload of the incoming messages from the end-nodes.
+
 #### Distance to Depth Conversion
+
+The raw measurements of the ultrasonic sensors are distances. Depth measurements are calculated via two transformations - Inversion followed by Offsetting. Inversion is multiplying the distance measurements with negative one. Offsetting is adding an offset value to the inverted measurements to obtain depth measurements.
 
 #### Erroneous Depth Data Filter
 
