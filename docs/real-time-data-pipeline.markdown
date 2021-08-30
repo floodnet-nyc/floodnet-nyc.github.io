@@ -102,11 +102,11 @@ Raw as well as processed data is stored in the InfluxDB database. From there, Gr
 
 #### Message Syntax Check - TTN Console
 
-Payload decoder has been implemented on the TTN console to check and verify the payload of the incoming messages from the end-nodes.
+Payload decoder has been implemented on the TTN console to verify and decode the payload of the incoming messages from the end-nodes.
 
 #### Distance to Depth Conversion
 
-The raw measurements of the ultrasonic sensors are distances. Depth measurements are calculated via two transformations - Inversion followed by Offsetting. Inversion is multiplying the distance measurements with negative one. Offsetting is adding an offset value to the inverted measurements to obtain depth measurements.
+The raw measurements of the ultrasonic sensors are distances. Depth measurements are calculated via two transformations - Inversion followed by Offsetting. Inversion is multiplying the distance measurements with negative one. Offsetting is adding an offset value to the inverted measurements to obtain depth measurements. 
 
 #### Erroneous Depth Data Filter
 
