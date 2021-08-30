@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Sensor Hardware Quality Control
+title: Quality Control
 parent: Quality Management
-permalink: /quality-management/sensor-hardware-quality-control/
+permalink: /quality-management/quality-control/
 ---
 
 # Quality Control
 
-The documnet set forths the quality control procedures are to verify the quality of the sensor build with consistency.
+After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QC testing is followed after Quality Assurance Procedure (QAP). QAP is a quality management procedure followed during the sensor build process, whereas QC procedures are performed after the complete build procedure and before the deployment.
 
 **Table of Contents:**
 
@@ -22,10 +22,10 @@ The documnet set forths the quality control procedures are to verify the quality
 
 ### Purpose
 
-Provide Quality Control (QC) guidelines for 
+The purpose of this document is to provide Quality Control (QC) guidelines for 
 
-- Sensor Calibration testing 
-- Sensor accuracy testing and validation
+- Sensor Calibration Testing and Validation
+- Noise Floor Testing
 
 ## Quality Requirements
 
@@ -41,11 +41,9 @@ The following are the quality requirements of the Flood Sensor:
 
 ## Quality Control
 
-|      | **Quality Control** | **Comply** | **Comment/Action Taken** |
-| ---- | :------------------ | :--------- | :----------------------- |
-|      |                     |            |                          |
-|      |                     |            |                          |
-|      |                     |            |                          |
+##### Sensor Validation
+
+##### Noise floor Testing
 
 ## References
 
