@@ -108,7 +108,46 @@ Payload decoder has been implemented on the TTN console to verify and decode the
 
 The raw measurements of the ultrasonic sensors are distances. Depth measurements are calculated via two transformations - Inversion followed by Offsetting. Inversion is multiplying the distance measurements with negative one. Offsetting is adding an offset value to the inverted measurements to obtain depth measurements. 
 
+**Raw distance measurements:**
+The following figure shows raw distance values of the sensor on Carroll and 4th from 20th August midnight to 22nd August 12:00 pm. Two floods have been captured during the night of 22nd and they correspond to the two spikes in the figure.
+
+![raw-distance](/assets/images/raw-distance.png)
+
+Distance readings are usually the distance between the street sidewalk and the sensor installation height within the noise floor. From the figure it can be observed that this baseline or the most common values when there is no flood is 2.82 meters. But during the time of the flood, the water level is the new surface the sensor detects and as the water level increases upwards, the distance between the sensor and this new surface decreases. Therefore the spikes are downwards.
+
+**Inversion:**
+
+Inverting the measurements is more intuitive as the spikes are now upwards and has the same profile as the flood. 
+
+![after-inversion](/assets/images/after-inversion.png)
+
+However these are not depth measurements yet as they are at an offset.
+
+**Offsetting:** 
+
+After inversion, an offset value is calculated and added to obtain depth values.
+
+![after-inversion-and-offsetting](/assets/images/after-inversion-and-offsetting.png)
+
+Now the baseline when there is no flood is around 0 and the depths are above this baseline.
+
 #### Erroneous Depth Data Filter
+
+The flood depth data is further filtered to remove noise without losing the important flood-data characteristics such as timing, duration, depth, and the flood profile. Data filtering involves the following steps: 
+
+1. **Gross Range Check:** 
+
+   The range of the raw distance measurements are based on the sensor model and its range. For example, `30mm - 5000 mm` ranging sensor can only measure distances between these intervals. However, after installing the sensor at a known installation height, assuming the profile of the sidewalk's surface is constant, this range now becomes `30mm - installation height`. Hence any distance measurements outside this new range is discarded.
+
+2. **Spike Check**:
+
+   Spikes in the depth data can be caused by external agents such as animals, humans or any other object large enough to be detected by the sensor. The sensor takes the median of 5 measurements for every uplink to minimize these spikes. Furthermore, the spikes leads to a different profile compared to that of flood and are omitted.
+
+   For example, the alerting system calculates the rate of change of successive depth measurements. This rate of change of depth measurements is slow and different for a flood compared to that of any other object because a gradual raise of the water surface corresponds to a gradual increase in the depth measurements. Where as an external object causes a very large rate of change and the alerting system does not flag these measurements as a flood.
+
+3. **Noise Check:**
+
+   Since the sensor working principle is based on the speed of the sound, the ultrasonic sensor measurements are influenced by the same factors - temperature, humidity, direct sunlight, wind etc that influence the speed of sound in air. This noise is around 1% of the measurement or 1 inch when installed at 2.5 meters. Due to solar radiation during the day, the temperature of the housing changes and the measured depth deviates from the actual depth by this noise floor. This deviation is caused by error in the temperature compensation. Therefore the depth measurements that lie within this noise floor are filtered out. 
 
 #### Data Storage - InfluxDB
 
