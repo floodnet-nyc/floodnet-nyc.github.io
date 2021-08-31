@@ -7,43 +7,41 @@ permalink: /quality-management/quality-control/
 
 # Quality Control
 
-After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QC testing is followed after Quality Assurance Procedure (QAP). QAP is a quality management procedure followed during the sensor build process, whereas QC procedures are performed after the complete build procedure and before the deployment.
+After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QAP is a quality management procedure followed during the sensor build/assembly process, whereas QC procedures are performed after the complete build procedure and before the deployment.
 
 **Table of Contents:**
 
-  * [General](#general)
-    * [Purpose](#purpose)
-* [Quality Requirements](#quality-requirements)
-* [Quality Control](#quality-control)
-* [Quality Control Records](#quality-control-records)
-* [References](#references)
+## 1.0 General 
 
-## General 
-
-### Purpose
+### 1.1 Purpose
 
 The purpose of this document is to provide Quality Control (QC) guidelines for 
 
-- Sensor Calibration Testing and Validation
-- Noise Floor Testing
+1. Sensor Calibration and Data Validation Testing
 
-## Quality Requirements
+2. Noise Floor Testing
 
-The following are the quality requirements of the Flood Sensor:
+## 2.0 Quality Control
 
-| Quality Requirements       | Description                                                  |
-| :------------------------- | ------------------------------------------------------------ |
-| Sensor Data Validation     |                                                              |
-| Good Sensor Accuracy       |                                                              |
-| Desired Sensor operation   | 1.  The sensor Hardware shall be functional and tested before moving onto the software stage |
-| Weatherproofed Sensor      | 1. The sensor and it's housing shall be checked for any defects or potential damage that might cause failure in waterproofing |
-| Good Wireless Connectivity | 1. Sensor tested on the Testing Application on the back-end<br />2. Good RSSI values for LoRa |
+### 2.1 Sensor Calibration and Data Validation Testing
 
-## Quality Control
+#### Objective:
 
-##### Sensor Validation
+#### Methodology:
 
-##### Noise floor Testing
+#### Criteria:
+
+#### Records:
+
+### 2.2 Noise floor Testing
+
+#### Objective:
+
+#### Methodology:
+
+#### Criteria:
+
+#### Records:
 
 ## References
 
