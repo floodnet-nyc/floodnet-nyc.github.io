@@ -143,3 +143,6 @@ Instruction on using the step drill, jigs, and other tools {Fill-me-in}
 ## References
 
 1. [*ER Quality Program Plan*, ES/*ER*/TM-4/R4. (*MMES 1994a*)](https://rais.ornl.gov/documents/tm117.pdf)
+2. [The Spruce, Wire connection problems and solutions](https://www.thespruce.com/wire-connection-problems-and-solutions-1152877)
+3. [Adafruit's Tutorial on Good Soldering Practices](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all)
+4. [How to Solder: Through-hole Soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all)

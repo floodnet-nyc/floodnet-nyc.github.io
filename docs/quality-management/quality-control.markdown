@@ -45,20 +45,20 @@ To perform initial calibration and validate sensor data after QAP in laboratory 
 
 #### Procedure
 
-The mounting bracket lies on a plane higher that the sensor cone. When installed at a known height, the sensor reading is differed by an offset (h_offset) which is equal to the difference between the mount level and the sensor level. 
-
-Therefore when the sensor is mounted at a known height i.e when the mounting bracket is installed at a known height, the sensor reading should lie within the noise floor of the sensor and offset by the value h_offset.
-
-1. Using measuring tape, mount locations are fixed at heights h1, h2, h3, h4 from the surface. 
-2. The sensor is mounted at these known heights in order starting from h1 and collects data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.
-3. For the next 30 minutes, an object of known height is placed on the surface and measurements are recorded.
-4. The object is removed and the sensor is moved onto the next height and the process is repeated until the sensor has been tested at all the heights.
+1. Using measuring tape, fix mount locations at heights h1, h2, h3, h4 from the surface. 
+2. Miount the sensor at these known heights in order starting from h1 and collect data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.
+3. Place a known object on the surface beneath the sensor for the next 30 minutes and record the measurements.
+4. Remove the object and move the sensor onto the next height and repeat the process until the sensor has been tested and recorded at all the heights h1, h2, h3 and h4.
 
 #### Calibration
 
-The data collected from the sensor is used to calibrate and measure the height of the known object. Since measurement of depth is relative to another vertical elevation from a known reference point, this height of the object is a simulation of depth level. 
+Calculate offset value for every heights by taking median of these measurements. Invert the distance values and add this calculated offset values to obtain depth values.
 
-At every given height, the offset is calculated and transformed into depth levels. The depth shall match the objects height.
+#### Data Validation
+
+Since measurement of depth is relative to another vertical elevation from a known reference point, the height of a known object is used to simulate validation of depth level captured by the sensor.
+
+At every given test height h1, h2, h3, and h4, the average of the observed height of the object calculated from the depth values shall be Real Object's height +- noise floor. 
 
 #### Records
 
@@ -80,7 +80,5 @@ Noise floor for every sensor along with the sensor unique identifiers shall be r
 
 ## References
 
-1. [The Spruce, Wire connection problems and solutions](https://www.thespruce.com/wire-connection-problems-and-solutions-1152877)
-2. [Adafruit's Tutorial on Good Soldering Practices](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all)
-3. [How to Solder: Through-hole Soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all)
+1. 
 
