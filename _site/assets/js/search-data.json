@@ -49,21 +49,21 @@
   },"8": {
     "doc": "Quality Control",
     "title": "Quality Control",
-    "content": "# Quality Control After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QC testing is followed after Quality Assurance Procedure (QAP). QAP is a quality management procedure followed during the sensor build process, whereas QC procedures are performed after the complete build procedure and before the deployment. **Table of Contents:** * [General](#general) * [Purpose](#purpose) * [Quality Requirements](#quality-requirements) * [Quality Control](#quality-control) * [Quality Control Records](#quality-control-records) * [References](#references) ## General ### Purpose The purpose of this document is to provide Quality Control (QC) guidelines for - Sensor Calibration Testing and Validation - Noise Floor Testing ## Quality Requirements The following are the quality requirements of the Flood Sensor: | Quality Requirements | Description | :------------------------- | ------------------------------------------------------------ | Sensor Data Validation | | Good Sensor Accuracy | | Desired Sensor operation | 1. The sensor Hardware shall be functional and tested before moving onto the software stage | Weatherproofed Sensor | 1. The sensor and it's housing shall be checked for any defects or potential damage that might cause failure in waterproofing | Good Wireless Connectivity | 1. Sensor tested on the Testing Application on the back-end2. Good RSSI values for LoRa | ## Quality Control ##### Sensor Validation ##### Noise floor Testing ## References 1. [The Spruce, Wire connection problems and solutions](https://www.thespruce.com/wire-connection-problems-and-solutions-1152877) 2. [Adafruit's Tutorial on Good Soldering Practices](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all) 3. [How to Solder: Through-hole Soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all) ",
+    "content": "# Quality Control After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QAP is a quality management procedure followed during the sensor build/assembly process, whereas QC procedures are performed after the complete build procedure and before the deployment. **Table of Contents:** ## 1.0 General ### 1.1 Purpose The purpose of this document is to provide Quality Control (QC) guidelines for 1. Sensor Calibration and Data Validation Testing 2. Noise Floor Testing ## 2.0 Quality Control ### 2.1 Sensor Calibration and Data Validation Testing #### Objective: #### Methodology: #### Criteria: #### Records: ### 2.2 Noise floor Testing #### Objective: #### Methodology: #### Criteria: #### Records: ## References 1. [The Spruce, Wire connection problems and solutions](https://www.thespruce.com/wire-connection-problems-and-solutions-1152877) 2. [Adafruit's Tutorial on Good Soldering Practices](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all) 3. [How to Solder: Through-hole Soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all) ",
     "url": "/quality-management/quality-control/",
     "relUrl": "/quality-management/quality-control/"
   },"9": {
     "doc": "Quality Management",
     "title": "Roles and Responsibilities",
     "content": "The following table outlines the roles and responsibilities for FloodNet personnel | FloodNet personnel | Roles | QA Responsibilities | --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | Technical Lead | 1. QA/QC Manager/Advisor 2. Technical Lead | 1. Manages the project and oversees the big picture2. Uses strong technical skills to help the team solve technical issues | Sensor Engineer | 1. QA/QC Team Test Lead 2. QA/QC Validation Engineer | 1. Provides Leadership specifically to the test team to support the test teammates and oversee test processes 2. Participate in validation of the Quality Assurance Process (QAP)/Quality Control (QC) 3. Develop and maintain Manual/Automated test processes | Graduate Research Assistant | 1. QA/QC Manual/Automation Test Analyst 2. QA/QC Tester | 1. Develop, maintain and execute Manual/Automated test processes 2. Follow strict set of instructions to test or validate the product | ",
-    "url": "/docs/quality-management/",
-    "relUrl": "/docs/quality-management/"
+    "url": "/quality-management/",
+    "relUrl": "/quality-management/"
   },"10": {
     "doc": "Quality Management",
     "title": "Quality Management",
-    "content": "# Quality Management This folder contains the Quality Management at FloodNet including - Quality Assurance Procedure (QAP), Quality Control (QC), and Troubleshooting to implement, execute, and validate the sensor quality. {: .fs-6 .fw-300 } ",
-    "url": "/docs/quality-management/",
-    "relUrl": "/docs/quality-management/"
+    "content": "# Quality Management This folder contains the Quality Management at FloodNet including - Quality Assurance Procedure (QAP), Quality Control (QC), and Troubleshooting to implement, execute, and validate the sensor quality. {: .fs-6 .fw-300 } ![quality-management-process](/assets/images/quality-management-process.png) ",
+    "url": "/quality-management/",
+    "relUrl": "/quality-management/"
   },"11": {
     "doc": "Real-time Data Pipeline",
     "title": "Real-time Data Pipeline",
