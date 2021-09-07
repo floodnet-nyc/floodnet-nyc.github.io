@@ -41,13 +41,13 @@ The purpose of this document is to provide Quality Control (QC) guidelines for
 
 #### Objective
 
-To perform initial calibration and validate sensor data after QAP in laboratory conditions. 
+To perform initial calibration and validation of the raw sensor data in laboratory conditions. 
 
 #### Procedure
 
 1. Using measuring tape, fix mount locations at heights h1, h2, h3, h4 from the surface. 
 2. Miount the sensor at these known heights in order starting from h1 and collect data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.
-3. Place a known object on the surface beneath the sensor for the next 30 minutes and record the measurements.
+3. Place an object of known height on the surface, beneath the sensor for the next 30 minutes and record the measurements.
 4. Remove the object and move the sensor onto the next height and repeat the process until the sensor has been tested and recorded at all the heights h1, h2, h3 and h4.
 
 #### Calibration
