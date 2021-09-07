@@ -1,4 +1,4 @@
-I"{,<h1 id="quality-assurance-procedure-qap">Quality Assurance Procedure (QAP)</h1>
+I"/.<h1 id="quality-assurance-procedure-qap">Quality Assurance Procedure (QAP)</h1>
 
 <p>This document details the Quality Assurance Procedure (QAP) at FloodNet. This document details every stage of the build/assembly procedure to ensure a good sensor build quality.</p>
 
@@ -186,5 +186,8 @@
 
 <ol>
   <li><a href="https://rais.ornl.gov/documents/tm117.pdf"><em>ER Quality Program Plan</em>, ES/<em>ER</em>/TM-4/R4. (<em>MMES 1994a</em>)</a></li>
+  <li><a href="https://www.thespruce.com/wire-connection-problems-and-solutions-1152877">The Spruce, Wire connection problems and solutions</a></li>
+  <li><a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all">Adafruit’s Tutorial on Good Soldering Practices</a></li>
+  <li><a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all">How to Solder: Through-hole Soldering</a></li>
 </ol>
 :ET

@@ -1,4 +1,4 @@
-I"�.<h1 id="real-time-data-pipeline">Real-time Data Pipeline</h1>
+I"W/<h1 id="real-time-data-pipeline">Real-time Data Pipeline</h1>
 
 <ul>
   <li><a href="#10-general">1.0 General</a>
@@ -7,9 +7,9 @@
       <li><a href="#12-purpose">1.2 Purpose</a></li>
     </ul>
   </li>
-  <li><a href="#20-considerations-limitations">2.0 Considerations/Limitations</a></li>
-  <li><a href="#21-ground-truth-validation-of-real-time-flood-depth-data">2.1 Ground truth Validation of Real-time Flood Depth Data</a>
+  <li><a href="#20-considerations-limitations">2.0 Considerations/Limitations</a>
     <ul>
+      <li><a href="#21-ground-truth-validation-of-real-time-flood-depth-data">2.1 Ground truth Validation of Real-time Flood Depth Data</a></li>
       <li><a href="#22-sensor-deployment-considerations">2.2 Sensor Deployment Considerations</a>
         <ul>
           <li><a href="#221-error-in-pole-mount-angles">2.2.1 Error in Pole Mount Angles</a></li>
@@ -118,26 +118,27 @@
 
 <p>The raw measurements of the ultrasonic sensors are distances. Depth measurements are calculated via two transformations - Inversion followed by Offsetting. Inversion is multiplying the distance measurements with negative one. Offsetting is adding an offset value to the inverted measurements to obtain depth measurements.</p>
 
-<p><strong>Raw distance measurements:</strong>
-The following figure shows raw distance values of the sensor on Carroll and 4th from 20th August midnight to 22nd August 12:00 pm. Two floods have been captured during the night of 22nd and they correspond to the two spikes in the figure.</p>
+<h5 id="raw-distance-measurements">Raw distance measurements:</h5>
 
-<p><img src="/assets/images/raw-distance.png" alt="raw-distance" /></p>
+<p>The following figure shows raw distance values of the sensor on Carroll and 4th from 20th August midnight to 22nd August 12:00 pm. Two floods have been captured during the night of 22nd and they correspond to the two spikes in the figure.</p>
+
+<p><img src="/assets/images/raw-distance-data.png" alt="raw-distance" /></p>
 
 <p>Distance readings are usually the distance between the street sidewalk and the sensor installation height within the noise floor. From the figure it can be observed that this baseline or the most common values when there is no flood is 2.82 meters. But during the time of the flood, the water level is the new surface the sensor detects and as the water level increases upwards, the distance between the sensor and this new surface decreases. Therefore the spikes are downwards.</p>
 
-<p><strong>Inversion:</strong></p>
+<h5 id="inversion">Inversion:</h5>
 
 <p>Inverting the measurements is more intuitive as the spikes are now upwards and has the same profile as the flood.</p>
 
-<p><img src="/assets/images/after-inversion.png" alt="after-inversion" /></p>
+<p><img src="/assets/images/inverted-distance-data.png" alt="after-inversion" /></p>
 
 <p>However these are not depth measurements yet as they are at an offset.</p>
 
-<p><strong>Offsetting:</strong></p>
+<h5 id="offsetting">Offsetting:</h5>
 
 <p>After inversion, an offset value is calculated and added to obtain depth values.</p>
 
-<p><img src="/assets/images/after-inversion-and-offsetting.png" alt="after-inversion-and-offsetting" /></p>
+<p><img src="/assets/images/offsetted-distance-data.png" alt="after-inversion-and-offsetting" /></p>
 
 <p>Now the baseline when there is no flood is around 0 and the depths are above this baseline.</p>
 
@@ -147,23 +148,25 @@ The following figure shows raw distance values of the sensor on Carroll and 4th 
 
 <ol>
   <li>
-    <p><strong>Gross Range Check:</strong></p>
+    <h5 id="gross-range-check">Gross Range Check:</h5>
 
-    <p>The range of the raw distance measurements are based on the sensor model and its range. For example, <code class="language-plaintext highlighter-rouge">30mm - 5000 mm</code> ranging sensor can only measure distances between these intervals. However, after installing the sensor at a known installation height, assuming the profile of the sidewalk’s surface is constant, this range now becomes <code class="language-plaintext highlighter-rouge">30mm - installation height</code>. Hence any distance measurements outside this new range is discarded.</p>
+    <p>The range of the raw distance measurements are based on the sensor model and its range. For example, <code class="language-plaintext highlighter-rouge">30mm - 5000 mm</code> ranging sensor can only measure distances between these intervals. However, after installing the sensor at a known installation height, assuming the profile of the sidewalk’s surface is constant, this range now becomes <code class="language-plaintext highlighter-rouge">30mm - installation height</code>. Hence any distance measurement outside this new range is discarded.</p>
   </li>
   <li>
-    <p><strong>Spike Check</strong>:</p>
+    <h5 id="spike-check">Spike Check:</h5>
 
     <p>Spikes in the depth data can be caused by external agents such as animals, humans or any other object large enough to be detected by the sensor. The sensor takes the median of 5 measurements for every uplink to minimize these spikes. Furthermore, the spikes leads to a different profile compared to that of flood and are omitted.</p>
 
     <p>For example, the alerting system calculates the rate of change of successive depth measurements. This rate of change of depth measurements is slow and different for a flood compared to that of any other object because a gradual raise of the water surface corresponds to a gradual increase in the depth measurements. Where as an external object causes a very large rate of change and the alerting system does not flag these measurements as a flood.</p>
   </li>
   <li>
-    <p><strong>Noise Check:</strong></p>
+    <h5 id="noise-check">Noise Check:</h5>
 
     <p>Since the sensor working principle is based on the speed of the sound, the ultrasonic sensor measurements are influenced by the same factors - temperature, humidity, direct sunlight, wind etc that influence the speed of sound in air. This noise is around 1% of the measurement or 1 inch when installed at 2.5 meters. Due to solar radiation during the day, the temperature of the housing changes and the measured depth deviates from the actual depth by this noise floor. This deviation is caused by error in the temperature compensation. Therefore the depth measurements that lie within this noise floor are filtered out.</p>
   </li>
 </ol>
+
+<p><img src="/assets/images/filtered-depth-data.png" alt="filtered-depth-data" /></p>
 
 <h4 id="data-storage---influxdb">Data Storage - InfluxDB</h4>
 

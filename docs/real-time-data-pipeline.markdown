@@ -112,7 +112,7 @@ The raw measurements of the ultrasonic sensors are distances. Depth measurements
 
 The following figure shows raw distance values of the sensor on Carroll and 4th from 20th August midnight to 22nd August 12:00 pm. Two floods have been captured during the night of 22nd and they correspond to the two spikes in the figure.
 
-![raw-distance](/assets/images/raw-distance.png)
+![raw-distance](/assets/images/raw-distance-data.png)
 
 Distance readings are usually the distance between the street sidewalk and the sensor installation height within the noise floor. From the figure it can be observed that this baseline or the most common values when there is no flood is 2.82 meters. But during the time of the flood, the water level is the new surface the sensor detects and as the water level increases upwards, the distance between the sensor and this new surface decreases. Therefore the spikes are downwards.
 
@@ -120,7 +120,7 @@ Distance readings are usually the distance between the street sidewalk and the s
 
 Inverting the measurements is more intuitive as the spikes are now upwards and has the same profile as the flood. 
 
-![after-inversion](/assets/images/after-inversion.png)
+![after-inversion](/assets/images/inverted-distance-data.png)
 
 However these are not depth measurements yet as they are at an offset.
 
@@ -128,7 +128,7 @@ However these are not depth measurements yet as they are at an offset.
 
 After inversion, an offset value is calculated and added to obtain depth values.
 
-![after-inversion-and-offsetting](/assets/images/after-inversion-and-offsetting.png)
+![after-inversion-and-offsetting](/assets/images/offsetted-distance-data.png)
 
 Now the baseline when there is no flood is around 0 and the depths are above this baseline.
 
@@ -149,6 +149,8 @@ The flood depth data is further filtered to remove noise without losing the impo
 3. ##### Noise Check:
 
    Since the sensor working principle is based on the speed of the sound, the ultrasonic sensor measurements are influenced by the same factors - temperature, humidity, direct sunlight, wind etc that influence the speed of sound in air. This noise is around 1% of the measurement or 1 inch when installed at 2.5 meters. Due to solar radiation during the day, the temperature of the housing changes and the measured depth deviates from the actual depth by this noise floor. This deviation is caused by error in the temperature compensation. Therefore the depth measurements that lie within this noise floor are filtered out. 
+
+![filtered-depth-data](/assets/images/filtered-depth-data.png)
 
 #### Data Storage - InfluxDB
 
