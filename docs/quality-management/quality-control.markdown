@@ -7,7 +7,7 @@ permalink: /quality-management/quality-control/
 
 # Quality Control
 
-After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QAP is a quality management procedure followed during the sensor build/assembly process, whereas QC procedures are performed after the complete build procedure and before the deployment.
+After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QAP is a quality management procedure followed during the sensor build/assembly process, whereas QC procedures are performed after the complete build procedure and before the deployment.QC procedure helps us in testing and calibrating the device.Testing reduces the uncertanities in device performance.Calibration helps in vaidating the data
 
 **Table of Contents:**
 
@@ -29,7 +29,7 @@ After the production/assembly stage, quality control (QC) tests are performed on
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide Quality Control (QC) guidelines for 
+The purpose of this document is to provide Quality Control (QC) guidelines for the following 
 
 1. Sensor Calibration and Data Validation Testing
 
@@ -41,17 +41,19 @@ The purpose of this document is to provide Quality Control (QC) guidelines for
 
 #### Objective
 
-To perform initial calibration and validate sensor data after QAP in laboratory conditions. 
+To perform initial calibration and validate sensor data after QAP in laboratory conditions.This helps us to validate and calibrate the raw data from the sensor.
+
+A procedure to calibrate the sensor is given below.
 
 #### Procedure
 
-1. Using measuring tape, fix mount locations at heights h1, h2, h3, h4 from the surface. 
-2. Miount the sensor at these known heights in order starting from h1 and collect data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.
-3. Place a known object on the surface beneath the sensor for the next 30 minutes and record the measurements.
-4. Remove the object and move the sensor onto the next height and repeat the process until the sensor has been tested and recorded at all the heights h1, h2, h3 and h4.
+1. Identify four different locations with different heights (h1,h2,h3,h4) from the surface using measuring tape.
+2. Strating from mount location h1 place the sensor at each mount location  and collect data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.This provides us enought data to understand the intrinsic noise floor of the sensor and helps for calibration .
+3. When sensor is at each position place an object with known height beneath the sensor for the next 30 minutes and record the measurements.This helps us to validate the measurements received by the sensor.Since we know the distance of placed object the measured distance by sensor should be (ground truth + or - noise)
+4. Repeat the above steps for the remainng heights.
 
 #### Calibration
-
+The purpose of calibration is to 
 Calculate offset value for every heights by taking median of these measurements. Invert the distance values and add this calculated offset values to obtain depth values.
 
 #### Data Validation
