@@ -48,12 +48,12 @@ A procedure to calibrate the sensor is given below.
 #### Procedure
 
 1. Identify four different locations with different heights (h1,h2,h3,h4) from the surface using measuring tape.
-2. Strating from mount location h1 place the sensor at each mount location  and collect data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.This provides us enought data to understand the intrinsic noise floor of the sensor and helps for calibration .
-3. When sensor is at each position place an object with known height beneath the sensor for the next 30 minutes and record the measurements.This helps us to validate the measurements received by the sensor.Since we know the distance of placed object the measured distance by sensor should be (ground truth + or - noise)
+2. Strating from mount location h1 place the sensor at each mount location  and collect data every 30 seconds for at least 30 minutes, totaling at least 60 measurements.This provides us enought data to understand the intrinsic noise  of the sensor and helps for calibration .
+3. When sensor is at each position place an object with known height beneath the sensor for the next 30 minutes and record the measurements.This helps us to validate the measurements received by the sensor(since we know the distance of placed object the measured distance by sensor should be ground truth + or - noise).
 4. Repeat the above steps for the remainng heights.
 
 #### Calibration
-The purpose of calibration is to 
+The purpose of calibration is to get a single straight line in the event of no flood
 Calculate offset value for every heights by taking median of these measurements. Invert the distance values and add this calculated offset values to obtain depth values.
 
 #### Data Validation
