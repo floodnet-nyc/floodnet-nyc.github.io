@@ -21,11 +21,11 @@ Create a folder and place the markdown inside this folder, example:
 
 Testing Locally
 
-`cd floodsense.github.io`
-
-`bundle install`
-
-`bundle exec jekyll serve --config _config_local.yml` 
+```
+cd floodsense.github.io
+bundle install
+bundle exec jekyll serve --config _config_local.yml
+```
 
  
 
