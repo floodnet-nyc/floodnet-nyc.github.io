@@ -46,11 +46,11 @@ This section details the important considerations and limitations of the Flood D
 
 ## 2.1 Ground truth Validation of Real-time Flood Depth Data
 
-To manually validate the Real-time Flood Depth Data, the FloodNet researchers have conducted a Manual Validation Experiment during the event of a flood on the July 23 at 8:30pm in {location}. Manual depth calculation is performed by manually capturing the depth readings from a standard measuring scale that has been installed on the same pole on which the sensor has been mounted.
+To validate the Real-time Flood Depth Data, the FloodNet researchers have conducted a validation experiment during the event of a flood on the July 23 at 8:30pm in Hamilton Beach. Depth calculation is performed manually by capturing the depth readings using a standard measuring scale that has been installed onto the same pole the sensor has been mounted.
 
 <img src="/assets/images/floodnet-researchers-in-action.jpg" width="400"/>
 
-The following figure shows the comparision of manual depth captured vs Flood-Depth Data processed from the Data-pipeline. The results verify the validation of the Flood Depth Data captured by the Real-time Flood Monitoring System.
+This manually collected data is compared to the depth data the sensor collected in real-time during the event of the flood. The following figure shows the comparison of manual depth captured vs Flood-Depth Data processed from the Data-pipeline. The results verify the validation of the Flood Depth Data captured by the Real-time Flood Monitoring System.
 
 <figure>
   <img
