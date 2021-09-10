@@ -32,7 +32,7 @@ This document details the Quality Assurance Procedure (QAP) at FloodNet. This do
 
 ### Purpose
 
-The main objective of this document is to establish and execute Quality Assurance Procedure (QAP) to produce high quality sensor standards with consistency.
+The main objective of this document is to establish and execute Quality Assurance Procedure (QAP) to produce high quality sensor builds with consistency.
 
 ## Quality Assurance Procedure
 
@@ -40,16 +40,21 @@ The QAP shall be followed by all the personnel responsible for performing and ve
 
 ### Stage 1 - PCB Assembly
 
-1. Gather the PCB and a multimeter to check the PCB for any manufacturing defects. To perform the PCB fault check, place one probe on the beginning of the trace and the other on the ending and check for any short circuits like shown in figure 1. Repeat this process for every trace.
+1. Gather the PCB and a multimeter to check the PCB for any manufacturing defects. Choose the continuity setting on the multimeter indicated by a small microphone symbol. To perform the PCB fault check, place one probe on the beginning of the trace and the other on the ending and check for connectivity like shown in figure 1. Repeat this process for every trace.
 
-2. While placing the PCB upside down, Solder a 2-pin JST connector into the Battery IN like shown in figure 2. 
-   <br /><u>Note:</u> All the holes of the screw terminal shall be facing the print on the PCB like shown in figure 2.
+
+   The both ends of a trace shall have connectivity. Across different traces continuity shall not be observed unless they share the common pin like GND or V+.
+
+2. While placing the PCB upside down, Solder a 2-pin JST connector into the Battery IN facing towards the center of the board like shown in figure 2. 
+   <br />
 
 3. Now with PCB in the same position, solder the three legs of the slide switch into the ON OFF pins like shown below in figure 3 (There are a total of 5 legs on this components and the legs on the either ends need not to be soldered, i.e. the middle three are the ones that need soldering). The switch does not have polarity but just on and off depending on where the slider lies.
 
 4. Turn the PCB around and make sure the switch is turned of like shown in figure 4.
 
 5. Now with the PCB placed upside down, solder screw terminals for Ultrasonic Sensor and Solar input like shown in the figure 5.
+
+   <u>Note:</u> All the holes of the screw terminal shall be facing the text on the PCB like shown in figure 5.
 
 6. Now Solder battery out screw terminals into BAT OUT like shown in figure 6.
 
