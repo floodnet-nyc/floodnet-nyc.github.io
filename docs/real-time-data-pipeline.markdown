@@ -23,7 +23,7 @@ permalink: /real-time-data-pipeline/
 - [3.0 Flood Depth Data Flow Pipeline](#30-flood-depth-data-flow-pipeline)
   * [3.1 Data Flow Pipeline Overview](#31-data-flow-pipeline-overview)
   * [3.2 Data Processing Methodology](#32-data-processing-methodology)
-    + [Message Syntax Check - TTN Console](#message-syntax-check---ttn-console)
+    + [Message Syntax Check](#message-syntax-check)
     + [Distance to Depth Conversion](#distance-to-depth-conversion)
     + [Erroneous Depth Data Filter](#erroneous-depth-data-filter)
     + [Data Storage - InfluxDB](#data-storage---influxdb)
@@ -34,7 +34,7 @@ permalink: /real-time-data-pipeline/
 
 ## 1.1 Background
 
-This project uses advanced IoT flood sensors to measure Real-time Flood Depth Data (FDD) on a city-wide scale using [Industrial grade Ultrasonic](https://www.maxbotix.com/ultrasonic_sensors/mb7389.htm) ranging technology. The Ultrasonic rangefinder readings are distance measurements and they are passed through a real-time data pipeline to calculate depth measurements.
+This project uses advanced IoT flood sensors to measure Real-time Flood Depth Data (FDD) on a city-wide scale using [industrial grade ultrasonic](https://www.maxbotix.com/ultrasonic_sensors/mb7389.htm) ranging technology. The ultrasonic rangefinder readings are distance measurements and they are passed through a real-time data pipeline to calculate depth measurements.
 
 ## 1.2 Purpose
 
@@ -104,7 +104,7 @@ This section explains the data processing methodology implemented in the real-ti
 
 There are three main components where all these stages takes place: TTN Console, Node-Red and InfluxDB. The following sections explain these stages in detail.
 
-### Message Syntax Check - TTN Console
+### Message Syntax Check 
 
 Payload decoder has been implemented on the TTN console to verify and decode the raw payload of incoming messages from end-nodes.
 
