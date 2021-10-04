@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: Quality Assurance Procedure
 parent: Quality Management
@@ -38,67 +39,138 @@ The main objective of this document is to establish and execute Quality Assuranc
 
 The QAP shall be followed by all the personnel responsible for performing and verifying work affecting sensor quality. 
 
-### Stage 1 - PCB Assembly
+### Stage 1 - Housing Preparation 
 
-1. Gather the PCB and a multimeter to check the PCB for any manufacturing defects. Choose the continuity setting on the multimeter indicated by a small microphone symbol. To perform the PCB fault check, place one probe on the beginning of the trace and the other on the ending and check for connectivity like shown in figure 1. Repeat this process for every trace.
+Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/1/0012/0350/3168/files/4210T.Manual.20190108.pdf?3927471806556549811)
 
+1. Secure the housing lid using a vice and drill a hole of diameter 1 1/4".
 
-   The both ends of a trace shall have connectivity. Across different traces continuity shall not be observed unless they share the common pin like GND or V+.
+      <img src="/assets/images/IMG_8097.JPG" alt="IMG_8097" style="zoom:18%;" />
 
-2. While placing the PCB upside down, Solder a 2-pin JST connector into the Battery IN facing towards the center of the board like shown in figure 2. 
-   <br />
+   The hole in the lid shall be able accommodate the Ultrasonic sensor.
 
-3. Now with PCB in the same position, solder the three legs of the slide switch into the ON OFF pins like shown below in figure 3 (There are a total of 5 legs on this components and the legs on the either ends need not to be soldered, i.e. the middle three are the ones that need soldering). The switch does not have polarity but just on and off depending on where the slider lies.
+   <img src="/assets/images/IMG_8101.JPG" alt="IMG_8101" style="zoom:22%;" />
 
-4. Turn the PCB around and make sure the switch is turned of like shown in figure 4.
+2. Similarly using a step drill and a vice, on the sides with no mounting support, drill a hole of diameter 1/2" on one side and 1/4" on the other side.
 
-5. Now with the PCB placed upside down, solder screw terminals for Ultrasonic Sensor and Solar input like shown in the figure 5.
+   <img src="/assets/images/IMG_8102.JPG" alt="IMG_8102" style="zoom:22.5%;" />
 
-   <u>Note:</u> All the holes of the screw terminal shall be facing the text on the PCB like shown in figure 5.
+### Stage 2 - PCB Assembly
 
-6. Now Solder battery out screw terminals into BAT OUT like shown in figure 6.
+1. Gather a multimeter and check the PCB for any manufacturing defects. Choose the continuity setting on the multimeter indicated by a small microphone symbol. 
 
-7. Using a multimeter check for shorts and connectivity like shown in figure 7. Further quality of the soldering shall be checked at this step and [identify and resolve any soldering errors](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all#common-problems).
+   <img src="/assets/images/IMG_8023.JPG" alt="IMG_8023" style="zoom:18%;" />
 
-### Stage 2 - MCU Assembly
+   To perform the PCB fault check, place one probe on the beginning of the trace and the other on the ending and check for connectivity as shown in the figure below. Repeat this process for every trace.
 
-1. Prepare a 2 Pin JST connector by tanning the other ends. Then, insert the JST 2 pin connecter on the back side of MCU like shown below in figure 8.
-2. Now cut the MCU male headers to match the number of through holes on the PCB and the female header pins like shown in the below figure 9.
-3. Mount the MCU male headers into female headers like shown in the figure 10 below. 
-4. Solder MCU header pins on the top of the MCU while the MCU is securely held by the female header pins on the bottom like shown in figure 11.
-5. With the PCB upside down solder the female header pins into the PCB like shown below in figure 12. 
-6. Now, connect the 2 ends of the JST connector from the MCU with the BAT OUT into their corresponding terminals VB and G respectively like shown in the figure 13 below.
-7. Using a multimeter check for the connectivity between the MCU pins and the screw terminals.
+   <img src="/assets/images/IMG_8026.jpg" alt="IMG_8026" style="zoom:24%;" />
 
-### Stage 3 - Battery Assembly
+   <img src="/assets/images/IMG_8025.JPG" alt="IMG_8025" style="zoom:23%;" />
 
-1. Remove the MCU from the female header pins and insert a ***fully charged*** 400mAh battery into the BAT IN and secure the battery by using a tape like shown in the figure 14 below.
-2. Mount the MCU back onto the headers and make sure the battery is not under pressure or being crushed by the MCU. When the battery and MCU are looking like figure 15, there must be enough space between the MCU and battery.
+   The both ends of a trace shall have connectivity. Across different traces, continuity shall not be observed unless they share the common pin like GND or V+.
+
+2. While placing the PCB upside down, Solder a 2-pin JST connector into the Battery IN facing towards the center of the board. 
+   
+   <img src="/assets/images/IMG_8028.JPG" alt="IMG_8028" style="zoom:27%;" />
+   
+   
+   
+   <img src="/assets/images/IMG_8027.JPG" alt="IMG_8027" style="zoom:23%;" />
+   
+3. Now with PCB in the same position, solder the three legs of the slide switch into the ON OFF pins like shown below  (There are a total of 5 legs on this components and the legs on the either ends need not to be soldered, i.e. the middle three are the ones that need soldering). The switch does not have polarity but just on and off depending on where the slider lies.
+
+   <img src="/assets/images/IMG_8103.JPG" alt="IMG_8103" style="zoom:27%;" />
+
+4. Turn the PCB around and make sure the switch is ***turned off***.
+
+5. Now with the PCB placed upside down, solder screw terminals for Ultrasonic Sensor and Solar input like shown below.
+
+   <img src="/assets/images/IMG_8104.JPG" alt="IMG_8104" style="zoom:23%;" />
+
+   <img src="/assets/images/IMG_8105.JPG" alt="IMG_8105" style="zoom:22%;" />
+
+   <u>Note:</u> All the holes of the screw terminal shall be facing the text on the PCB like shown in above figures.
+
+6. Now Solder battery out screw terminals into **BAT OUT** like below.
+
+   <img src="/assets/images/IMG_8106.JPG" alt="IMG_8106" style="zoom:23%;" />
+
+7. Using a multimeter check for shorts and connectivity. Further quality of the soldering shall be checked at this step and [identify and resolve any soldering errors](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all#common-problems).
+
+### Stage 3 - MCU Assembly
+
+1. Now cut the MCU male headers to match the 8-pin female headers as shown in the below figure.
+
+   <img src="/assets/images/IMG_8108.JPG" alt="IMG_8108" style="zoom:18%;" />
+
+2. Insert these male headers into female headers and place the MCU's first eight pins, both sides on top of these male headers. Solder header pins while the MCU is securely held by the female header pins, as shown in the figure below.
+
+   <img src="/assets/images/IMG_8109.JPG" alt="IMG_8109" style="zoom:23%;" />
+
+3. With the PCB upside down solder the female header pins into the PCB like shown below. Make sure PCB is facing the right direction and inserted into the correct pins. 
+
+   <img src="/assets/images/IMG_8111.JPG" alt="IMG_8111" style="zoom:25%;" />
+
+   <img src="/assets/images/IMG_8113.JPG" alt="IMG_8113" style="zoom:23%;" />
+
+4. Using a multimeter check for the connectivity between the MCU pins and the screw terminals.
+
+### Stage 4 - Battery Assembly
+
+1. With the switch turned ***off***, remove the MCU from the female header pins and insert a ***fully charged*** 400 mAh battery into the **BAT IN**.
+
+   <img src="/assets/images/IMG_8114.JPG" alt="IMG_8114" style="zoom:23%;" />
+
+2. Prepare a 2 Pin JST connector by tanning the other ends. Insert the connecter on the back side of MCU as shown below.
+
+   <img src="/assets/images/IMG_8107.JPG" alt="IMG_8107" style="zoom:40%;" />
+
+3. Connect the JST connector with **BAT OUT** into their corresponding **VB** and **G**, respectively, as shown below.
+
+   <img src="/assets/images/IMG_8115.JPG" alt="IMG_8115" style="zoom:13%;" />
+
+4. Mount the MCU back onto the headers and make sure the battery is not under any pressure or being crushed by the MCU. When done correctly battery should be only held by the JST connector and sits comfortably under the MCU.
+
+   <img src="/assets/images/IMG_8119.JPG" alt="IMG_8119" style="zoom:22%;" />
 
 ### Evaluation 1 - Main voltage check
 
-1. Turn on the switch and check the voltage at BAT OUT. The multimeter reading should be VBat - the battery's voltage level, across VB and GND when the s/w is on like shown below in figure 15.
-2. Turn off the switch before proceeding to next steps - figure 16.
-
-### Stage 4 - Housing Preperation
-
-Instruction on using the step drill, jigs, and other tools {Fill-me-in}
-
-1. Secure the lid of the housing and place a marker right on the center using a ultrasonic-jig. Remove the ultrasonic-jig and drill a hole of diameter {fill-me-in} to accommodate the Ultrasonic sensor like shown in figure 17.
-2. Secure the housing with the side that does not have mounting supports facing upwards. Place a marker using the antenna-jig. Remove the antenna-jig and drill a hole of diameter {fill-me-in} to accommodate the antenna like shown in figure 18.
-3. Similarly, on the opposite side where there is no mounting support, drill a hole of diameter {fill-me-in} using the pg5-cable-jig to accommodate the solar panel cable like shown in figure 19.
+1. Turn on the switch and check the voltage at BAT OUT. The multimeter reading should be **VBat** - the battery's voltage level, across **VB** and **GND** when the s/w is on.
+2. ***Turn off*** the switch before proceeding to next steps when the evaluation has been successfully completed.
 
 ### Stage 5 - Ultrasonic Sensor Assembly
 
-1. Tan both ends of 4 different colored wires and solder one end of the wires onto the Ultrasonic sensor's pins - GND, V+, 5 and 4 respectively like shown in figure 20. 
-2. Now twist the cables like shown below in figure 21.
+1. Tan both ends of 4 different colored wires and solder one end of the wires onto the Ultrasonic sensor's pins - GND, V+, 5 and 4.
+
+2. Carefully, without applying too much pressure on the solder joints, twist them like shown.
+
+   <img src="/assets/images/IMG_8120.JPG" alt="IMG_8120" style="zoom:22%;" />
+
 3. Check for connectivity and any [common soldering errors](https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all#common-problems).
-4. Stack 2 washers that come with the lock nut like shown below in figure 22.
-5. Insert US into the housing lid secure it using a lock nut on the inside of the housing lid like shown in figure 23.
+
+4. Stack 2 washers that come with the lock nut like shown below.
+
+   <img src="/assets/images/IMG_8121.JPG" alt="IMG_8121" style="zoom:16%;" />
+
+5. Insert US into the housing lid secure it using a lock nut on the inside of the housing lid.
+
+   <img src="/assets/images/IMG_8122.JPG" alt="IMG_8122" style="zoom:15%;" />
+
+   <img src="/assets/images/IMG_8124.JPG" alt="IMG_8124" style="zoom:15%;" />
+
+6. Connect V+ of ultrasonic sensor to the VE of PCB.
+
+   Connect GND of ultrasonic sensor to the G of PCB.
+
+   Connect pin 4 of ultrasonic sensor to the G5 of PCB.
+
+   Connect pin 5 of ultrasonic sensor to the RX of PCB.
+
+   <img src="/assets/images/IMG_8126.JPG" alt="IMG_8126" style="zoom:20%;" />
 
 ### Stage 6 - PCB Mounting
 
-1. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the one shown in the figure 24.
+1. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the housing holes: 1/2" hole shall be facing the solar input.
 2. Insert the MCU back into the header pins
 
 ### Stage 7 - Solar Panel Assembly
