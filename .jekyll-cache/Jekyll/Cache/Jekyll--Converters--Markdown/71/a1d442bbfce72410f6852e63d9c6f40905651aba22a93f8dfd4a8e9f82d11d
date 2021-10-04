@@ -1,0 +1,288 @@
+I" 9<h1 id="quality-assurance-procedure-qap">Quality Assurance Procedure (QAP)</h1>
+
+<p>This document details the Quality Assurance Procedure (QAP) at FloodNet. This document details every stage of the build/assembly procedure to ensure a good sensor build quality.</p>
+
+<p><strong>Table of contents:</strong></p>
+
+<ul>
+  <li><a href="#general">General</a>
+    <ul>
+      <li><a href="#purpose">Purpose</a></li>
+    </ul>
+  </li>
+  <li><a href="#quality-assurance-process">Quality Assurance Procedure</a>
+    <ul>
+      <li><a href="#stage-1---pcb-assembly">Stage 1 - PCB Assembly</a></li>
+      <li><a href="#stage-2---mcu-assembly">Stage 2 - MCU Assembly</a></li>
+      <li><a href="#stage-3---battery-assembly">Stage 3 - Battery Assembly</a></li>
+      <li><a href="#evaluation-1---main-voltage-check">Evaluation 1 - Main voltage check</a></li>
+      <li><a href="#stage-4---housing-preperation">Stage 4 - Housing Preperation</a></li>
+      <li><a href="#stage-5---ultrasonic-sensor-assembly">Stage 5 - Ultrasonic Sensor Assembly</a></li>
+      <li><a href="#stage-6---pcb-mounting">Stage 6 - PCB Mounting</a></li>
+      <li><a href="#stage-7---solar-panel-assembly">Stage 7 - Solar Panel Assembly</a></li>
+      <li><a href="#evaluation-2---solar-panel-operation">Evaluation 2 - Solar Panel Operation</a></li>
+      <li><a href="#stage-8---antenna-assembly">Stage 8 - Antenna Assembly</a></li>
+      <li><a href="#evaluation-3---sensor-operation">Evaluation 3 - Sensor Operation</a></li>
+      <li><a href="#final-steps">Final steps</a></li>
+    </ul>
+  </li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+<h2 id="general">General</h2>
+
+<h3 id="purpose">Purpose</h3>
+
+<p>The main objective of this document is to establish and execute Quality Assurance Procedure (QAP) to produce high quality sensor builds with consistency.</p>
+
+<h2 id="quality-assurance-procedure">Quality Assurance Procedure</h2>
+
+<p>The QAP shall be followed by all the personnel responsible for performing and verifying work affecting sensor quality.</p>
+
+<h3 id="stage-1---housing-preparation">Stage 1 - Housing Preparation</h3>
+
+<p>Instructions on using the step drill are <a href="https://cdn.shopify.com/s/files/1/0012/0350/3168/files/4210T.Manual.20190108.pdf?3927471806556549811">here</a></p>
+
+<ol>
+  <li>
+    <p>Secure the housing lid using a vice and drill a hole of diameter 1 1/4”.</p>
+
+    <p><img src="/assets/images/IMG_8097.JPG" alt="IMG_8097" style="zoom:18%;" /></p>
+
+    <p>The hole in the lid shall be able accommodate the Ultrasonic sensor.</p>
+
+    <p><img src="/assets/images/IMG_8101.JPG" alt="IMG_8101" style="zoom:22%;" /></p>
+  </li>
+  <li>
+    <p>Similarly using a step drill and a vice, on the sides with no mounting support, drill a hole of diameter 1/2” on one side and 1/4” on the other side.</p>
+
+    <p><img src="/assets/images/IMG_8102.JPG" alt="IMG_8102" style="zoom:22.5%;" /></p>
+  </li>
+</ol>
+
+<h3 id="stage-2---pcb-assembly">Stage 2 - PCB Assembly</h3>
+
+<ol>
+  <li>
+    <p>Gather a multimeter and check the PCB for any manufacturing defects. Choose the continuity setting on the multimeter indicated by a small microphone symbol.</p>
+
+    <p><img src="/assets/images/IMG_8023.JPG" alt="IMG_8023" style="zoom:18%;" /></p>
+
+    <p>To perform the PCB fault check, place one probe on the beginning of the trace and the other on the ending and check for connectivity as shown in the figure below. Repeat this process for every trace.</p>
+
+    <p><img src="/assets/images/IMG_8026.jpg" alt="IMG_8026" style="zoom:24%;" /></p>
+
+    <p><img src="/assets/images/IMG_8025.JPG" alt="IMG_8025" style="zoom:23%;" /></p>
+
+    <p>The both ends of a trace shall have connectivity. Across different traces, continuity shall not be observed unless they share the common pin like GND or V+.</p>
+  </li>
+  <li>
+    <p>While placing the PCB upside down, Solder a 2-pin JST connector into the Battery IN facing towards the center of the board.</p>
+
+    <p><img src="/assets/images/IMG_8028.JPG" alt="IMG_8028" style="zoom:27%;" /></p>
+
+    <p><img src="/assets/images/IMG_8027.JPG" alt="IMG_8027" style="zoom:23%;" /></p>
+  </li>
+  <li>
+    <p>Now with PCB in the same position, solder the three legs of the slide switch into the ON OFF pins like shown below  (There are a total of 5 legs on this components and the legs on the either ends need not to be soldered, i.e. the middle three are the ones that need soldering). The switch does not have polarity but just on and off depending on where the slider lies.</p>
+
+    <p><img src="/assets/images/IMG_8103.JPG" alt="IMG_8103" style="zoom:27%;" /></p>
+  </li>
+  <li>
+    <p>Turn the PCB around and make sure the switch is <strong><em>turned off</em></strong>.</p>
+  </li>
+  <li>
+    <p>Now with the PCB placed upside down, solder screw terminals for Ultrasonic Sensor and Solar input like shown below.</p>
+
+    <p><img src="/assets/images/IMG_8104.JPG" alt="IMG_8104" style="zoom:23%;" /></p>
+
+    <p><img src="/assets/images/IMG_8105.JPG" alt="IMG_8105" style="zoom:22%;" /></p>
+
+    <p><u>Note:</u> All the holes of the screw terminal shall be facing the text on the PCB like shown in above figures.</p>
+  </li>
+  <li>
+    <p>Now Solder battery out screw terminals into <strong>BAT OUT</strong> like below.</p>
+
+    <p><img src="/assets/images/IMG_8106.JPG" alt="IMG_8106" style="zoom:23%;" /></p>
+  </li>
+  <li>
+    <p>Using a multimeter check for shorts and connectivity. Further quality of the soldering shall be checked at this step and <a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all#common-problems">identify and resolve any soldering errors</a>.</p>
+  </li>
+</ol>
+
+<h3 id="stage-3---mcu-assembly">Stage 3 - MCU Assembly</h3>
+
+<ol>
+  <li>
+    <p>Now cut the MCU male headers to match the 8-pin female headers as shown in the below figure.</p>
+
+    <p><img src="/assets/images/IMG_8108.JPG" alt="IMG_8108" style="zoom:18%;" /></p>
+  </li>
+  <li>
+    <p>Insert these male headers into female headers and place the MCU’s first eight pins, both sides on top of these male headers. Solder header pins while the MCU is securely held by the female header pins, as shown in the figure below.</p>
+
+    <p><img src="/assets/images/IMG_8109.JPG" alt="IMG_8109" style="zoom:23%;" /></p>
+  </li>
+  <li>
+    <p>With the PCB upside down solder the female header pins into the PCB like shown below. Make sure PCB is facing the right direction and inserted into the correct pins.</p>
+
+    <p><img src="/assets/images/IMG_8111.JPG" alt="IMG_8111" style="zoom:25%;" /></p>
+
+    <p><img src="/assets/images/IMG_8113.JPG" alt="IMG_8113" style="zoom:23%;" /></p>
+  </li>
+  <li>
+    <p>Using a multimeter check for the connectivity between the MCU pins and the screw terminals.</p>
+  </li>
+</ol>
+
+<h3 id="stage-4---battery-assembly">Stage 4 - Battery Assembly</h3>
+
+<ol>
+  <li>
+    <p>With the switch turned <strong><em>off</em></strong>, remove the MCU from the female header pins and insert a <strong><em>fully charged</em></strong> 400 mAh battery into the <strong>BAT IN</strong>.</p>
+
+    <p><img src="/assets/images/IMG_8114.JPG" alt="IMG_8114" style="zoom:23%;" /></p>
+  </li>
+  <li>
+    <p>Prepare a 2 Pin JST connector by tanning the other ends. Insert the connecter on the back side of MCU as shown below.</p>
+
+    <p><img src="/assets/images/IMG_8107.JPG" alt="IMG_8107" style="zoom:40%;" /></p>
+  </li>
+  <li>
+    <p>Connect the JST connector with <strong>BAT OUT</strong> into their corresponding <strong>VB</strong> and <strong>G</strong>, respectively, as shown below.</p>
+
+    <p><img src="/assets/images/IMG_8115.JPG" alt="IMG_8115" style="zoom:13%;" /></p>
+  </li>
+  <li>
+    <p>Mount the MCU back onto the headers and make sure the battery is not under any pressure or being crushed by the MCU. When done correctly battery should be only held by the JST connector and sits comfortably under the MCU.</p>
+
+    <p><img src="/assets/images/IMG_8119.JPG" alt="IMG_8119" style="zoom:22%;" /></p>
+  </li>
+</ol>
+
+<h3 id="evaluation-1---main-voltage-check">Evaluation 1 - Main voltage check</h3>
+
+<ol>
+  <li>Turn on the switch and check the voltage at BAT OUT. The multimeter reading should be <strong>VBat</strong> - the battery’s voltage level, across <strong>VB</strong> and <strong>GND</strong> when the s/w is on.</li>
+  <li><strong><em>Turn off</em></strong> the switch before proceeding to next steps when the evaluation has been successfully completed.</li>
+</ol>
+
+<h3 id="stage-5---ultrasonic-sensor-assembly">Stage 5 - Ultrasonic Sensor Assembly</h3>
+
+<ol>
+  <li>
+    <p>Tan both ends of 4 different colored wires and solder one end of the wires onto the Ultrasonic sensor’s pins - GND, V+, 5 and 4.</p>
+  </li>
+  <li>
+    <p>Carefully, without applying too much pressure on the solder joints, twist them like shown.</p>
+
+    <p><img src="/assets/images/IMG_8120.JPG" alt="IMG_8120" style="zoom:22%;" /></p>
+  </li>
+  <li>
+    <p>Check for connectivity and any <a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all#common-problems">common soldering errors</a>.</p>
+  </li>
+  <li>
+    <p>Stack 2 washers that come with the lock nut like shown below.</p>
+
+    <p><img src="/assets/images/IMG_8121.JPG" alt="IMG_8121" style="zoom:16%;" /></p>
+  </li>
+  <li>
+    <p>Insert US into the housing lid secure it using a lock nut on the inside of the housing lid.</p>
+
+    <p><img src="/assets/images/IMG_8122.JPG" alt="IMG_8122" style="zoom:15%;" /></p>
+
+    <p><img src="/assets/images/IMG_8124.JPG" alt="IMG_8124" style="zoom:15%;" /></p>
+  </li>
+  <li>
+    <p>Connect V+ of ultrasonic sensor to the VE of PCB.</p>
+
+    <p>Connect GND of ultrasonic sensor to the G of PCB.</p>
+
+    <p>Connect pin 4 of ultrasonic sensor to the G5 of PCB.</p>
+
+    <p>Connect pin 5 of ultrasonic sensor to the RX of PCB.</p>
+
+    <p><img src="/assets/images/IMG_8126.JPG" alt="IMG_8126" style="zoom:20%;" /></p>
+  </li>
+</ol>
+
+<h3 id="stage-6---pcb-mounting">Stage 6 - PCB Mounting</h3>
+
+<ol>
+  <li>Using a plier, cut the legs on the bottom of the soldered PCB to save some room.</li>
+  <li>Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the housing holes: 1/2” hole shall be facing the solar input.</li>
+  <li>Insert the MCU back into the header pins</li>
+</ol>
+
+<h3 id="stage-7---solar-panel-assembly">Stage 7 - Solar Panel Assembly</h3>
+
+<ol>
+  <li>
+    <p>Use a {fill-me-in} wire and cut it to a length of {fill-me-in} like shown in the figure 25.</p>
+  </li>
+  <li>
+    <p>Prepare the ends by tinning them like shown in the figure 26.</p>
+  </li>
+  <li>
+    <p>Place the nut of the PG-7 cable gland inside the housing and insert this prepared end of the wire into the hosuing through a PG-7 cable gland like shown in the figure 27.</p>
+  </li>
+  <li>
+    <p>Screw in the ends into the Solar screw terminals into the respective pins like shown in figure 28.</p>
+  </li>
+  <li>
+    <p>Stick one side of the gasket onto the 3d mount and run the other end of the solar cable through the 3d mount like shown in figure 29. Leave enough space for soldering the solar panel.</p>
+  </li>
+  <li>Now, prepare the ends by stripping the wires and tinning them and solder the ends onto the Solar board like shown in figure 30.</li>
+  <li>Screw the open ends of the solar cable into the screw terminal SOLAR through the cable gland and check connectivity between the solar panel and screw terminals like shown in figure 31.</li>
+</ol>
+
+<h3 id="evaluation-2---solar-panel-operation">Evaluation 2 - Solar Panel Operation</h3>
+
+<ol>
+  <li>Check for connectivity between both the ends of the solar cable. Also check for shorts between the VS and GND {figure 32}</li>
+  <li>
+    <p>Flash light onto the solar panel and check voltages on the screw terminals using a multimeter like shown below. When a phone falshlight is flashed upon the panel, it should read atleast 3 Volts. {figure 33}</p>
+  </li>
+  <li>Now with the light is being flashed onto the panel, verify the VS is the positive terminal. If not, the solar panel has been soldered in reverse and shall be re-soldered so that a positive voltage is seen on the VS. {figure 34}</li>
+</ol>
+
+<h3 id="stage-8---antenna-assembly">Stage 8 - Antenna Assembly</h3>
+
+<ol>
+  <li>Stack a star washer and lock washer and insert the end of the antenna with threading into the housing from the inside like shown in the figure 35</li>
+  <li>Secure it using a screw from the outside like shown in figure 36</li>
+  <li>Insert the ulf connector of the antenna onto the MCU like shown in figure 37.</li>
+  <li>Screw in the LoRa Antenna from the outside like shown in the figure 38. The antenna should feel tight after screwing onto the threading. If not, try washers of different size.</li>
+</ol>
+
+<h3 id="evaluation-3---sensor-operation">Evaluation 3 - Sensor Operation</h3>
+
+<ol>
+  <li>Flash the test firmware and check the battery voltage and ultrasonic measurements on TTN console. The battery voltage shall be between 3.7 Volts and 4.2 Volts. Since we would be using a fully charged battery, it should read voltage greater than 4 Volts. The distance reading on the TTN console shall be greater than or equal to 300 and less than or equal to the maximum range of the sensor model. The 5-meter model range is 300mm to 5000mm and the 10-meter model range is 300mm to 10000mm. {figure 39}</li>
+</ol>
+
+<h3 id="final-steps">Final steps</h3>
+
+<ol>
+  <li>
+    <p>Close the lid and make sure the ultrasonic sensor wires goes to the {} to avoid the wires being in the way. {figure 40}</p>
+  </li>
+  <li>
+    <p>Now secure the lid with screws {figure 41}</p>
+  </li>
+  <li>
+    <p>The sensor shall feel robust and when invereted there shall be no moving parts.</p>
+  </li>
+  <li>Inspect the sensor mechanical quality of the following: holes, mounts, securing enclosure, waterproofing. {figure 42}</li>
+  <li>Remove the tape on the gasket and install the solar panel onto the 3D mount {figure 43}</li>
+</ol>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://rais.ornl.gov/documents/tm117.pdf"><em>ER Quality Program Plan</em>, ES/<em>ER</em>/TM-4/R4. (<em>MMES 1994a</em>)</a></li>
+  <li><a href="https://www.thespruce.com/wire-connection-problems-and-solutions-1152877">The Spruce, Wire connection problems and solutions</a></li>
+  <li><a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering?view=all">Adafruit’s Tutorial on Good Soldering Practices</a></li>
+  <li><a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all">How to Solder: Through-hole Soldering</a></li>
+</ol>
+:ET

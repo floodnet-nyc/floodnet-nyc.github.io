@@ -168,54 +168,64 @@ Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/
 
    <img src="/assets/images/IMG_8126.JPG" alt="IMG_8126" style="zoom:20%;" />
 
-### Stage 6 - PCB Mounting
+### Stage 6 - PCB Mounting and Antenna Assembly
 
-1. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the housing holes: 1/2" hole shall be facing the solar input.
-2. Insert the MCU back into the header pins
+1. Using a plier, cut the legs on the bottom of the soldered PCB to save some room.
+
+2. Connect the MHF4 female to the MCU and secure SMA female end into the housing using a nut.
+
+   <img src="/assets/images/IMG_8128.JPG" alt="IMG_8128" style="zoom:20%;" />
+
+3. Insert the PCB into the housing by sliding it under the antenna like shown.
+
+   <img src="/assets/images/IMG_8129.JPG" alt="IMG_8129" style="zoom:20%;" />
+
+4. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the housing holes: 1/2" hole shall be facing the solar input.
+
+   <img src="/assets/images/IMG_8134.JPG" alt="IMG_8134" style="zoom:20%;" />
+
+5. Insert the MCU back into the header pins and screw the other end of the PCB into the housing.
+
+   <img src="/assets/images/IMG_8135.JPG" alt="IMG_8135" style="zoom:20%;" />
+
+6. Screw in a male LoRa antenna (should support 915 MHz) onto the SMA female connector.
 
 ### Stage 7 - Solar Panel Assembly
 
-1. Use a {fill-me-in} wire and cut it to a length of {fill-me-in} like shown in the figure 25.
+1. Cut an alarm cable or 2 conductor wire to a length of 30cm or 12 inches. Prepare the ends by tinning them.
 
-2. Prepare the ends by tinning them like shown in the figure 26.
+   *<u>Note:</u> Adjust the length so that cable can reach from the sensor to the panel based on the chosen mount.*
 
-3. Place the nut of the PG-7 cable gland inside the housing and insert this prepared end of the wire into the hosuing through a PG-7 cable gland like shown in the figure 27.
+2. Stick one side of the gasket onto the 3D-mount and run one end of the solar cable through the 3D-mount like shown.
 
-4. Screw in the ends into the Solar screw terminals into the respective pins like shown in figure 28.
+3. Solder the panel to this end that runs through the 3D-mount and gasket. 
 
-5. Stick one side of the gasket onto the 3d mount and run the other end of the solar cable through the 3d mount like shown in figure 29. Leave enough space for soldering the solar panel.
+4. Seal the panel using the gasket.
 
-6. Now, prepare the ends by stripping the wires and tinning them and solder the ends onto the Solar board like shown in figure 30.
-7. Screw the open ends of the solar cable into the screw terminal SOLAR through the cable gland and check connectivity between the solar panel and screw terminals like shown in figure 31.
+5. Place the nut of the PG-7 cable gland inside the housing and insert the other prepared end of the solar cable into the housing through a PG-7 cable gland.
+
+6. Screw the open ends of the solar cable into the screw terminal SOLAR. Secure the cable gland.
 
 ### Evaluation 2 - Solar Panel Operation
 
-1. Check for connectivity between both the ends of the solar cable. Also check for shorts between the VS and GND {figure 32}
-2. Flash light onto the solar panel and check voltages on the screw terminals using a multimeter like shown below. When a phone falshlight is  flashed upon the panel, it should read atleast 3 Volts. {figure 33}
+1. Check for connectivity between both the ends of the solar cable. Also check for shorts between the **VS** and **GND**.
+2. Flash light onto the solar panel and check voltages on the screw terminals using a multimeter. When a phone falshlight is flashed upon the panel, it should read atleast 3 Volts. 
 
-2. Now with the light is being flashed onto the panel, verify the VS is the positive terminal. If not, the solar panel has been soldered in reverse and shall be re-soldered so that a positive voltage is seen on the VS. {figure 34}
-
-### Stage 8 - Antenna Assembly
-
-1. Stack a star washer and lock washer and insert the end of the antenna with threading into the housing from the inside like shown in the figure 35
-2. Secure it using a screw from the outside like shown in figure 36
-3. Insert the ulf connector of the antenna onto the MCU like shown in figure 37.
-4. Screw in the LoRa Antenna from the outside like shown in the figure 38. The antenna should feel tight after screwing onto the threading. If not, try washers of different size.
+2. Now with the light is being flashed onto the panel, verify the **VS** is the ***positive*** terminal. If not, the solar panel has been soldered in reverse and shall be re-soldered so that a positive voltage is seen across **VS** and **GND**.
 
 ### Evaluation 3 - Sensor Operation
 
-1. Flash the test firmware and check the battery voltage and ultrasonic measurements on TTN console. The battery voltage shall be between 3.7 Volts and 4.2 Volts. Since we would be using a fully charged battery, it should read voltage greater than 4 Volts. The distance reading on the TTN console shall be greater than or equal to 300 and less than or equal to the maximum range of the sensor model. The 5-meter model range is 300mm to 5000mm and the 10-meter model range is 300mm to 10000mm. {figure 39}
+1. Flash the test firmware and check the battery voltage and ultrasonic measurements on TTN console. The battery voltage shall be between 3.7 Volts and 4.2 Volts. Since we would be using a fully charged battery, it should read voltage greater than 4 Volts. The distance reading on the TTN console shall be greater than or equal to 300 and less than or equal to the maximum range of the sensor model. The 5-meter model range is 300mm to 5000mm and the 10-meter model range is 300mm to 10000mm.
 
 ### Final steps
 
-1. Close the lid and make sure the ultrasonic sensor wires goes to the {} to avoid the wires being in the way. {figure 40}
+1. Close the lid and make sure the ultrasonic sensor wires goes into the space safely to avoid them being in the way. {figure 40}
 
 2. Now secure the lid with screws {figure 41}
 
 3. The sensor shall feel robust and when invereted there shall be no moving parts.
 
-4. Inspect the sensor mechanical quality of the following: holes, mounts, securing enclosure, waterproofing. {figure 42}
-5. Remove the tape on the gasket and install the solar panel onto the 3D mount {figure 43}
+4. Inspect the sensor mechanical quality of the following: holes, mounts, securing enclosure, waterproofing. 
 
 ## References
 
