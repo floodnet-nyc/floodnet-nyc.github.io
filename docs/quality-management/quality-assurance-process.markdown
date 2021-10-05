@@ -154,9 +154,9 @@ Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/
 
 5. Insert US into the housing lid secure it using a lock nut on the inside of the housing lid.
 
-   <img src="/assets/images/IMG_8122.JPG" alt="IMG_8122" style="zoom:15%;" />
+   <img src="/assets/images/IMG_8122.JPG" alt="IMG_8122" style="zoom:14%;" />
 
-   <img src="/assets/images/IMG_8124.JPG" alt="IMG_8124" style="zoom:15%;" />
+   <img src="/assets/images/IMG_8124.JPG" alt="IMG_8124" style="zoom:14%;" />
 
 6. Connect V+ of ultrasonic sensor to the VE of PCB.
 
@@ -166,7 +166,7 @@ Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/
 
    Connect pin 5 of ultrasonic sensor to the RX of PCB.
 
-   <img src="/assets/images/IMG_8126.JPG" alt="IMG_8126" style="zoom:20%;" />
+   <img src="/assets/images/IMG_8126.JPG" alt="IMG_8126" style="zoom:18%;" />
 
 ### Stage 6 - PCB Mounting and Antenna Assembly
 
@@ -174,21 +174,23 @@ Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/
 
 2. Connect the MHF4 female to the MCU and secure SMA female end into the housing using a nut.
 
-   <img src="/assets/images/IMG_8128.JPG" alt="IMG_8128" style="zoom:20%;" />
+   <img src="/assets/images/IMG_8128.JPG" alt="IMG_8128" style="zoom:18%;" />
 
 3. Insert the PCB into the housing by sliding it under the antenna like shown.
 
-   <img src="/assets/images/IMG_8129.JPG" alt="IMG_8129" style="zoom:20%;" />
+   <img src="/assets/images/IMG_8129.JPG" alt="IMG_8129" style="zoom:18%;" />
 
 4. Lift the MCU and screw the PCB onto the mounting headers on the base of the housing. The orientation shall match the housing holes: 1/2" hole shall be facing the solar input.
 
-   <img src="/assets/images/IMG_8134.JPG" alt="IMG_8134" style="zoom:20%;" />
+   <img src="/assets/images/IMG_8134.JPG" alt="IMG_8134" style="zoom:18%;" />
 
 5. Insert the MCU back into the header pins and screw the other end of the PCB into the housing.
 
-   <img src="/assets/images/IMG_8135.JPG" alt="IMG_8135" style="zoom:20%;" />
+   <img src="/assets/images/IMG_8135.JPG" alt="IMG_8135" style="zoom:18%;" />
 
 6. Screw in a male LoRa antenna (should support 915 MHz) onto the SMA female connector.
+
+   <img src="/assets/images/IMG_8138.JPG" alt="IMG_8138" style="zoom:18%;" />
 
 ### Stage 7 - Solar Panel Assembly
 
@@ -196,15 +198,31 @@ Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/
 
    *<u>Note:</u> Adjust the length so that cable can reach from the sensor to the panel based on the chosen mount.*
 
+   <img src="/assets/images/IMG_8139.JPG" alt="IMG_8139" style="zoom:18%;" />
+
 2. Stick one side of the gasket onto the 3D-mount and run one end of the solar cable through the 3D-mount like shown.
+
+   <img src="/assets/images/IMG_8141.JPG" alt="IMG_8141" style="zoom:18%;" />
 
 3. Solder the panel to this end that runs through the 3D-mount and gasket. 
 
+   <img src="/assets/images/IMG_8142.JPG" alt="IMG_8142" style="zoom:18%;" />
+
+   <img src="/assets/images/solar-solder.jpg" alt="solar-solder" style="zoom:18%;" />
+
 4. Seal the panel using the gasket.
+
+   <img src="/assets/images/IMG_8147.JPG" alt="IMG_8147" style="zoom:14%;" />
 
 5. Place the nut of the PG-7 cable gland inside the housing and insert the other prepared end of the solar cable into the housing through a PG-7 cable gland.
 
+   <img src="/assets/images/IMG_8150.JPG" alt="IMG_8150" style="zoom:18%;" />
+
 6. Screw the open ends of the solar cable into the screw terminal SOLAR. Secure the cable gland.
+
+   <img src="/assets/images/IMG_8153.JPG" alt="IMG_8153" style="zoom:18%;" />
+
+   <img src="/assets/images/IMG_8155.JPG" alt="IMG_8155" style="zoom:18%;" />
 
 ### Evaluation 2 - Solar Panel Operation
 
@@ -219,12 +237,9 @@ Instructions on using the step drill are [here](https://cdn.shopify.com/s/files/
 
 ### Final steps
 
-1. Close the lid and make sure the ultrasonic sensor wires goes into the space safely to avoid them being in the way. {figure 40}
-
-2. Now secure the lid with screws {figure 41}
-
+1. Close the lid and make sure the ultrasonic sensor wires goes into the space safely to avoid them being in the way. 
+2. Now secure the lid with screws 
 3. The sensor shall feel robust and when invereted there shall be no moving parts.
-
 4. Inspect the sensor mechanical quality of the following: holes, mounts, securing enclosure, waterproofing. 
 
 ## References
