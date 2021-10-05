@@ -58,7 +58,7 @@ To calculate the offset value, take median of all the measurements without the o
 
 Since measurement of depth is relative to another vertical elevation from a known reference point, the height of a known object is used to simulate validation of depth level captured by the sensor.
 
-At a known height, the average of the observed height of the object calculated from the depth values shall be $Object's\: height\; \overline{+}\; noise\: floor$. 
+At a known height, the average of the observed height of the object calculated from the depth values shall be Object's height +- noise floor. 
 
 #### Records
 
