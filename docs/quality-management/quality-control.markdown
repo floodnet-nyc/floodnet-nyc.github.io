@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Quality Control
+title: Sensor QC
 parent: Quality Management
-permalink: /quality-management/quality-control/
+permalink: /quality-management/sensor-quality-control/
 ---
 
-# Quality Control
+# Sensor Quality Control (QC)
 
 After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QAP is a quality management procedure followed during the sensor build/assembly process, whereas QC procedures are performed after the complete build procedure and before the deployment.
 
@@ -45,20 +45,20 @@ To perform initial calibration and validation of the sensor depth calculations a
 
 #### Procedure
 
-1. Using measuring tape, fix mount locations at heights h1, h2, and h3 from the surface. If three different mounts aren't available, vary the single mounting location's height accordingly. While fixing the mount, using a spirit leveler, make sure the mount is vertical to the mounting surface and horizontal to the ground plane. 
-2. Mount the sensor at these known heights in order starting from h1. Now collect data for at least 60 minutes, with a duty cycle of 60 seconds.
-3. After the second step is complete, place an object of known height on the surface, beneath the sensor for the next 60 minutes and record the measurements.
-4. Stop the sensor before removing the object and move the it onto the next height and repeat the process until the sensor has been tested and recorded at all the heights h1, h2, h3 so on.
+1. Using measuring tape, fix mount locations at heights at a known height from the ground. While fixing the mount, using a spirit leveler, make sure the mount is vertical to the mounting surface and horizontal to the ground plane. 
+2. Start sensor operation and collect data for at least 120 minutes, with a duty cycle of 60 seconds, totaling at least 120 measurements.
+3. After the second step is complete, place an object of known height on the surface, beneath the sensor for the next 120 minutes and record the measurements.
+4. Stop the sensor and removing the object.
 
 #### Calibration
 
-Calculate offset value for every heights by taking median of these measurements. Invert the distance values and add this calculated offset values to obtain depth values.
+To calculate the offset value, take median of all the measurements without the object. To convert distances to depth, invert the distance values and add this calculated offset.
 
-#### Depth  Data Validation
+#### Depth Data Validation
 
 Since measurement of depth is relative to another vertical elevation from a known reference point, the height of a known object is used to simulate validation of depth level captured by the sensor.
 
-At every given test height h1, h2, and h3, the average of the observed height of the object calculated from the depth values shall be Real Object's height +- noise floor. 
+At a known height, the average of the observed height of the object calculated from the depth values shall be $Object's\: height\; \overline{+}\; noise\: floor$. 
 
 #### Records
 
