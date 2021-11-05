@@ -11,7 +11,8 @@ nav_order: 2
  <h2>About</h2>
   <a href="https://www.floodnet.nyc/">FloodNet</a> is a cooperative of communities, researchers, and New York City government agencies working to better understand the frequency, severity, and impacts of flooding in New York City. The data and knowledge gained can be used by local residents, researchers, city agencies, and others to advocate around and work to reduce flood risk. FloodNet brings together innovative sources of information on street flooding impacts in neighborhoods that are vulnerable to high tides, storm surge, and stormwater runoff.
   <br>
-  <img style="padding: 20px;" src="/assets/images/gowanus-sensor.jpg" width="500"> 
+  <br>
+  <img style="padding: 20px;" src="/assets/images/carroll-garfield-sensor.jpeg" width="500"> 
 </div>
 
 <div align="justify">
