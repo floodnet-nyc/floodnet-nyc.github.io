@@ -6,7 +6,7 @@ parent: Quality Management
 permalink: /quality-management/sensor-assembly-with-quality-assurance-procedure/
 ---
 
-# sSensor Assembly with Quality Assurance Procedure (QAP)
+# Sensor Assembly with Quality Assurance Procedure (QAP)
 
 This document details the Quality Assurance Procedure (QAP) at FloodNet. This document details every stage of the build/assembly procedure to ensure a good sensor build quality.
 
