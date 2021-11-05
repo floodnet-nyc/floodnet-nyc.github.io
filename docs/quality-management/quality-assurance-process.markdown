@@ -1,9 +1,9 @@
 ---
 
 layout: default
-title: Sensor Assembly with QAP
+title: Sensor Assembly - QAP
 parent: Quality Management
-permalink: /quality-management/sensor-assembly-with-quality-assurance-procedure/
+permalink: /quality-management/sensor-assembly/
 ---
 
 # Sensor Assembly with Quality Assurance Procedure (QAP)
