@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Sensor QC
+title: Quality Control
 parent: Quality Management
-permalink: /quality-management/sensor-quality-control/
+permalink: /quality-management/quality-control/
 ---
 
-# Sensor Quality Control (QC)
+# Quality Control (QC)
 
 After the production/assembly stage, quality control (QC) tests are performed on every sensor to validate the data quality. QAP is a quality management procedure followed during the sensor build/assembly process, whereas QC procedures are performed after the complete build procedure and before the deployment.
 
